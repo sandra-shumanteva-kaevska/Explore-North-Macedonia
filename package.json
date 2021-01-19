@@ -1,0 +1,24 @@
+{
+  "name": "explore-north-macedonia",
+  "version": "1.0.0",
+  "description": "Travel Agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd frontend && npm start\" \"cd backend && npm run dev\"",
+    "postinstall": "concurrently \"cd frontend && npm install\" \"cd backend && npm install\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandra-shumanteva-kaevska/Explore-North-Macedonia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandra-shumanteva-kaevska/Explore-North-Macedonia/issues"
+  },
+  "homepage": "https://github.com/sandra-shumanteva-kaevska/Explore-North-Macedonia#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}

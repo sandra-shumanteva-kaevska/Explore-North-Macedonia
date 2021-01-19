@@ -1,0 +1,474 @@
+[
+    {
+        "title": "2 DAY WATERFALL ADVENTURE",
+        "description": "Our overnight trip to Korab is an experience you will never forget, hiking near the highest peak in the Republic of Macedonia at 2,764m. This journey goes through isolated mountain monasteries, with delicious mountain fruit ripe for tasting, blue berries and strawberries are abundant. This hiking adventure in Macedonia is physically challenging (six hour hike on the first day) so prepare for a workout as we hike upward. The Macedonian mountains are alive so there is always a chance to spot wild animals like deer or bears and chance of hearing wolves howling in the distance. The very rare and elusive Macedonian lynx also lives in these mountains, the lynx is a national symbol of Macedonia and is featured on the 5 denar coin. As we reach our destination we are greeting with a spectacularl view, a landscape of mountain peaks and a magnificent waterfall (korab waterfall). Soaking in the wonderful natural ambient we setup camp underneath the waterfall. Here wood is collected and a fire is started to keep us warm during the night and used to prepare our food for the feast whilst enjoying famous Macedonian Rakija. Our descent the following day is easier, following the mountain rivers down, here there is a chance to see deer in the wild and drink pristine water just melted from the winter snow. Walking down different forests until we finally reach our destination at Popova Sapka. This is a Macedonia hiking trip you will not forget.",
+        "startDate": "10.03.2021",
+        "endDate": "11.03.2021",
+        "price": 250,
+        "mainImageUrl": {
+            "url": "~/images/hikingTours/waterfallAdventure/waterfallAdventure.jpg",
+            "alt": "People lying and watching a small waterfall"
+        },
+        "images": [
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/1.jpg",
+                "alt": "Small lake and mountain view"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/2.jpg",
+                "alt": "Small waterfall"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/3.jpg",
+                "alt": "Small waterfall"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/4.jpg",
+                "alt": "Mountain village covered with snow"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/5.jpg",
+                "alt": "Mountains"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/6.jpg",
+                "alt": "Mountains"
+            },
+            {
+                "url": "~/images/hikingTours/waterfallAdventure/7.jpg",
+                "alt": "Mountain with clouds"
+            }
+        ],
+        "category": "hiking-tours"
+    },
+    {
+        "title": "2 DAY TOP OF MACEDONIA",
+        "description": "An amazing two day hike, one of our favorite central Macedonia tours. Epects taking in some spectacular views of the Jakupica mountain range and options for multiple difficulties including hikes to Begovo Pole and Solunska Glava. Walking through beautiful forests full of fruits and crisp mountain air We adapt the hiking to your request, so you can challenge yourself or just leisure in a pristine, mountain environment.",
+        "startDate": "10.04.2021",
+        "endDate": "11.04.2021",
+        "price": 180,
+        "mainImageUrl": {
+            "url": "~/images/hikingTours/topOfMacedonia/hikingTopOfMacedonia.jpg",
+            "alt": "Hiking man in mountain"
+        },
+        "images": [
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/1.jpg",
+                "alt": "Mountain view"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/2.jpg",
+                "alt": "Small waterfall"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/3.jpg",
+                "alt": "Green grass with mountain view"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/4.jpg",
+                "alt": "River and mountain "
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/5.jpg",
+                "alt": "View of snow top of mountain"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/6.jpg",
+                "alt": "View of top of mountain"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/7.jpg",
+                "alt": "People hiking on mountain"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/8.jpg",
+                "alt": "Mountain view"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/9.jpg",
+                "alt": "Green grass with mountain view"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/10.jpg",
+                "alt": "Sun behind the top of the mountain"
+            },
+            {
+                "url": "~/images/hikingTours/topOfMacedonia/11.jpg",
+                "alt": "Small waterfall"
+            }
+        ],
+        "category": "hiking-tours"
+    },
+    {
+        "title": "1 DAY VODNO HIKE",
+        "description": "Enjoy a scenic hike through our hand picked forest paths up to Cable Cars, where we are taken to the summit of Vodno. Enjoying the views over Skopje, when we reach the summit you can get your picture taken with the worlds biggest cross, the \"Millennium Cross\", which was built to celebrate 2000 years of Christianity. After a lite lunch we continue the hike and reach the breathtaking views of the ancient Matka Canyon. We then trek back and you are taken to your accommodation. A great 1 day hiking Skopje tour.",
+        "startDate": "15.03.2021",
+        "endDate": "15.03.2021",
+        "price": 50,
+        "mainImageUrl": {
+            "url": "~/images/hikingTours/vodnoHike/mainVodnoHike.jpg",
+            "alt": "Vodno cross"
+        },
+        "images": [
+            {
+                "url": "~/images/hikingTours/vodnoHike/1.jpg",
+                "alt": "Matka canyon"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/2.jpg",
+                "alt": "River Treska"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/3.jpg",
+                "alt": "Matka canyon"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/4.jpg",
+                "alt": "Panteleimon Church overlooking Skopje"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/5.jpg",
+                "alt": "Mountain Vodno with Skopje view "
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/6.jpg",
+                "alt": "Vodno cross"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/7.jpg",
+                "alt": "Cable car on Mount Vodno"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/8.jpg",
+                "alt": "Mountain Vodno with Skopje view "
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/9.jpg",
+                "alt": "River Treska"
+            },
+            {
+                "url": "~/images/hikingTours/vodnoHike/10.jpg",
+                "alt": "Matka canyon"
+            }
+        ],
+        "category": "hiking-tours"
+    },
+    {
+        "title": "1 DAY PELISTER",
+        "description": "The Tour offers Novice, Intermediate and Advanced options, suitable for all skill levels.The Novice track is selected for people who can ride a bike but have little to no experience in downhill mountain biking. We follow a picturesque route, through the ancient pine forests of National Park, Mt. Pelister. The track is a combination of some free riding (downhill) and the rest is completely cross country. Riding through and Via Egnatia, following the same path as the Macedonian Phalanx and Roman Legions, where we finally arrive to Heraclea Lychnis which is the birthplace of the town of Bitola, founded by Phillip II of Macedon, Alexander the Great’s father. The intermediate & advanced track on Mt. Pelister starts early in the morning. After breakfast we pick you up and drive to the drop off mount on Mt Pelister. From there is a 4 hour trek to the mountain peak and glacial lake “Golemo Ezero” or “Large Lake”, at an elevation of over 2000m. We rest, have lunch and prepare for the exhilarating downhill mountain biking journey. The track is rocky, with some small drops and narrow points, how fast we go will be dictated by your experience and adrenaline level. Be sure you will treasure the memory of this mountain biking experience on Mt. Pelister, beautiful nature and stunning mountain views.",
+        "startDate": "22.04.2021",
+        "endDate": "22.04.2021",
+        "price": 80,
+        "mainImageUrl": {
+            "url": "~/images/bikingTours/pelister/pelisterMainImg.jpg",
+            "alt": "Мan rides a bicycle on Pelister"
+        },
+        "images": [
+            {
+                "url": "~/images/bikingTours/pelister/1.jpg",
+                "alt": "Forest in Pelister"
+            },
+            {
+                "url": "~/images/bikingTours/pelister/2.jpg",
+                "alt": "\"Big Lake\" Pelister"
+            },
+            {
+                "url": "~/images/bikingTours/pelister/3.jpg",
+                "alt": "Pelister view"
+            },
+            {
+                "url": "~/images/bikingTours/pelister/4.jpg",
+                "alt": "\"Big Lake\" Pelister"
+            },
+            {
+                "url": "~/images/bikingTours/pelister/5.jpg",
+                "alt": "Pelister view"
+            }
+        ],
+        "category": "biking-tours"
+    },
+    {
+        "title": "2 DAY MOUNTAIN ADVENTURE",
+        "description": "This two day mountain biking experience is a great way to escape, experience beautiful nature with spectacular views and enjoy traditional Macedonian cuisine. The tour includes riding through the forest tracks of the mountain range Jakupica, in central Macedonia, heading up to Begovo Pole until we reach the breathtaking views of Solunska Glava, at 2000m altitude. *Reaching the peak is dependent on fitness level. As we ride through the pristine mountain habitat, there are several tracks we explore, all rugged and surrounded by forest. We settle back in the Karadzica mountain house where we enjoy traditional Macedonian cuisine with some local Rakija. Day 1: Drop off point to Mountain lodge in Central Macedonia total riding time: 3 hours, 12km, elevation of 500m. Reaching an altitude of 1460m. Day 2: Riding from mountain lodge to Begovo Pole, 11.5km altitude increase of 500m. Total riding time 3 hours uphill and 2 hours decent.",
+        "startDate": "22.04.2021",
+        "endDate": "23.04.2021",
+        "price": 190,
+        "mainImageUrl": {
+            "url": "~/images/bikingTours/mountanAdventure/mainImgMountainAdventure.jpg",
+            "alt": "Two people rides bicycles on mountain"
+        },
+        "images": [
+            {
+                "url": "~/images/bikingTours/mountanAdventure/1.jpg",
+                "alt": "Mountain View"
+            },
+            {
+                "url": "~/images/bikingTours/mountanAdventure/2.jpg",
+                "alt": "Green grass with mountain view"
+            },
+            {
+                "url": "~/images/bikingTours/mountanAdventure/3.jpg",
+                "alt": "Top of mountain"
+            },
+            {
+                "url": "~/images/bikingTours/mountanAdventure/4.jpg",
+                "alt": "Top of mountain"
+            },
+            {
+                "url": "~/images/bikingTours/mountanAdventure/5.jpg",
+                "alt": "Green grass with mountain view"
+            }
+        ],
+        "category": "biking-tours"
+    },
+    {
+        "title": "10 DAY NATIONAL BIKING TOUR",
+        "description": "Enjoy a scenic hike through our hand picked forest paths up to Cable Cars, where we are taken to the summit of Vodno. Enjoying the views over Skopje, when we reach the summit you can get your picture taken with the worlds biggest cross, the \"Millennium Cross\", which was built to celebrate 2000 years of Christianity. After a lite lunch we continue the hike and reach the breathtaking views of the ancient Matka Canyon. We then trek back and you are taken to your accommodation. A great 1 day hiking Skopje tour.",
+        "startDate": "17.04.2021",
+        "endDate": "17.04.2021",
+        "price": 60,
+        "mainImageUrl": {
+            "url": "~/images/bikingTours/nationalBiking/mainImg.jpg",
+            "alt": "Мen on bicycle on top of mountain"
+        },
+        "images": [
+            {
+                "url": "~/images/bikingTours/nationalBiking/1.jpg",
+                "alt": "Green grass with mountain view"
+            },
+            {
+                "url": "~/images/bikingTours/nationalBiking/2.jpg",
+                "alt": "View of top of mountain"
+            },
+            {
+                "url": "~/images/bikingTours/nationalBiking/3.jpg",
+                "alt": "Top of mountain covered with snow"
+            },
+            {
+                "url": "~/images/bikingTours/nationalBiking/4.jpg",
+                "alt": "Top of mount view"
+            },
+            {
+                "url": "~/images/bikingTours/nationalBiking/5.jpg",
+                "alt": "Top of mount view with lake view"
+            },
+            {
+                "url": "~/images/bikingTours/nationalBiking/6.jpg",
+                "alt": "Top of mount view with lake view"
+            }
+        ],
+        "category": "biking-tours"
+    },
+    {
+        "title": "1 DAY WINE TASTING SKOPJE TOUR",
+        "description": "1 Day wine tasting and lunch from Skopje, visiting Stobi winery and archeological site. In the morning we visit the ancient city of Stobi, where we have a tour around its ruins accompanied by a local guide. Stobi has deep history, started by ancient Macedonian tribes, with the main part of the archeological site showing the Roman period, where it was the capital of Roman Macedonia. Located next to the archeological site, one of the biggest wineries in Macedonia, Stobi winery. We will visit its rolling hills with never ending vineyards and learn about the charming Museum of Wine. As part of the wine tour, we continue into the wine cellar and learn more about the process of production of these wines under the assistance of professional sommeliers. We then have wine tasting and lunch in its unique restaurant with delicious traditional Macedonian food and wine. After lunch you can purchase any wine, after which we will head back to Skopje and the wine tour comes to an end.",
+        "startDate": "05.05.2021",
+        "endDate": "05.05.2021",
+        "price": 150,
+        "mainImageUrl": {
+            "url": "~/images/cultureTours/wineTastingSkopje/mainSkopje.jpg",
+            "alt": "\"Stobi\" the old City in Skopje"
+        },
+        "images": [
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/1.jpg",
+                "alt": "\"Stobi\" the old City in Skopje"
+            },
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/2.jpg",
+                "alt": "\"Stobi\" the old City in Skopje"
+            },
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/3.jpg",
+                "alt": "Vineyards"
+            },
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/4.jpg",
+                "alt": "Cellar with barrels of wine"
+            },
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/5.jpg",
+                "alt": "\"Stobi\" the old City in Skopje"
+            },
+            {
+                "url": "~/images/cultureTours/wineTastingSkopje/6.jpg",
+                "alt": "Three glasses with wine"
+            }
+        ],
+        "category": "culture-tours"
+    },
+    {
+        "title": "3 DAY WINE EXPERIENCE",
+        "description": "We will start with a visit of an ancient Roman city of Stobi, where we will have a tour around its ruins accompanied by a local guide. Very close to these city is situated one of our biggest wineries, Stobi winery. We will visit its rolling hills with never ending vineyards and learn about the charming Museum of Wine. After our few ours tour with lunch in this winery we will head to our next destination, the most famous Macedonian winery, Bovin. We will accommodate here.Bovin is the most attractive wine in Macedonia. It has won a lot of medals in many European and world wine awards. We will have our breakfast here, together with a wine tour in its wine basement. After this we will head to our next winery and great tourist destination, Popova Kula in the city Demir Kapija. We will have an official tour in this temple of wine, with wine testing and diner in its restaurant.After our breakfast we will head to the artificial lake Tikves Lake and we will absorb its beautiful natural surroundings. Today on our agenda is Tikves winery were we will have full wine tour. Here we will have our lunch and late afternoon we will head back to Skopje. Depending on your other schedule (other planned tours, flight schedule etc), we can arrange your accommodation before and after this tour in Skopje.",
+        "startDate": "08.05.2021",
+        "endDate": "10.05.2021",
+        "price": 550,
+        "mainImageUrl": {
+            "url": "~/images/cultureTours/wineExperience/mainWine.jpg",
+            "alt": "Table with grapes, wine and glasses"
+        },
+        "images": [
+            {
+                "url": "~/images/cultureTours/wineExperience/1.jpg",
+                "alt": "Room in winary"
+            },
+            {
+                "url": "~/images/cultureTours/wineExperience/2.jpg",
+                "alt": "The building of the winery"
+            },
+            {
+                "url": "~/images/cultureTours/wineExperience/3.jpg",
+                "alt": "Table with grapes, wine and glasses"
+            },
+            {
+                "url": "~/images/cultureTours/wineExperience/4.jpg",
+                "alt": "Picture witn national pie, cheese and tomato"
+            }
+        ],
+        "category": "culture-tours"
+    },
+    {
+        "title": "7 DAY DIONYSUS IN MACEDONIA",
+        "description": "We will start with a visit of Ohrid Tour, Stobi Archaeological & Wine tour, Skovin Winery, Skopje Tour, Bovin Winery, Temple of Wine tour, Beautiful Popova Kula, Museum of Wine, Tikves Winery, Vevchani, Delicious local cuisine, Wine Tasting",
+        "startDate": "10.05.2021",
+        "endDate": "16.05.2021",
+        "price": 1400,
+        "mainImageUrl": {
+            "url": "~/images/cultureTours/dionysusMacedonia/mainDionysus.jpg",
+            "alt": "National Macedonian food: pie, ajvar, yogurt, tomato and broccoli"
+        },
+        "images": [
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/1.jpg",
+                "alt": "National Macedonian meal \"Tavce gravce\""
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/2.jpg",
+                "alt": "National Macedonian meal \"Pastrmajlija\""
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/3.jpg",
+                "alt": "Kebabs with onion and chilli pepper"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/4.jpg",
+                "alt": "National Macedonian meal \"Daska\""
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/5.jpg",
+                "alt": "Vineyards"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/6.jpg",
+                "alt": "The building of the winery with vineyards"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/7.jpg",
+                "alt": "National Macedonian meal: bread with \"Ajvar\" and white cheese"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/8.jpg",
+                "alt": "National Macedonian salad \"Shopska\""
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/9.jpg",
+                "alt": "Table with grapes, wine and glasses"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/10.jpg",
+                "alt": "Vineyards with barrel of wine, grapes and glass of white wine"
+            },
+            {
+                "url": "~/images/cultureTours/dionysusMacedonia/11.jpg",
+                "alt": "Mix of Macedonian national food"
+            }
+        ],
+        "category": "culture-tours"
+    },
+    {
+        "title": "10 DAY GRAND HERITAGE TOUR",
+        "description": "Mavrovo - Visiting Vevchani, St Jovan Bigorski and Rajcica Monasteries, Macedonian Cuisine, Wine, Spirits, Music, Culture, Natural Beauty & History, Demir Kapija - Capital of Roman Macedonia, Stobi, Wine Tour in Popova Kula, Skopje - City tour, Museums, Millennium Cross, Matka, Ohrid - City Tour, Bay of Bones, St Naum, Boat Ride, Krusevo - Mechkin Kamen & Makedonium, city tour, Galicnik Wedding - Jewl of Macedonian Ethnography, Bitola - Ancient Heraclea, City Tour & Modern Culture",
+        "startDate": "10.05.2021",
+        "endDate": "16.05.2021",
+        "price": 1670,
+        "mainImageUrl": {
+            "url": "~/images/cultureTours/grandHeritage/mainGrandHeritage.jpg",
+            "alt": "Man on horse with Macedonian flag"
+        },
+        "images": [
+            {
+                "url": "~/images/cultureTours/grandHeritage/1.jpg",
+                "alt": "Galičnik Wedding (groom shaving)"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/2.jpg",
+                "alt": "Galichnik grooms in a church"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/3.jpg",
+                "alt": "Galichnik bride on a horse"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/4.jpg",
+                "alt": "River Vardar"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/5.jpg",
+                "alt": "\"Vrutok\""
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/6.jpg",
+                "alt": "River Vardar"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/7.jpg",
+                "alt": "Old bazаar"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/8.jpg",
+                "alt": "Church \"Kaneo\" in Ohrid"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/9.jpg",
+                "alt": "Vevcani Carnival (people with masks)"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/10.jpg",
+                "alt": "Vevcani Carnival (man on horse)"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/11.jpg",
+                "alt": "Vevcani Carnival (people with masks)"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/12.jpg",
+                "alt": "Old bazаar"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/13.jpg",
+                "alt": "Amphitheater in Ohrid"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/14.jpg",
+                "alt": "Wild horses"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/15.jpg",
+                "alt": "Village Galicnik"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/16.jpg",
+                "alt": "People with torches"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/17.jpg",
+                "alt": "Old bazаar"
+            },
+            {
+                "url": "~/images/cultureTours/grandHeritage/18.jpg",
+                "alt": "Prehistoric houses"
+            }
+        ],
+        "category": "culture-tours"
+    }
+]
