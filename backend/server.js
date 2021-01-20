@@ -18,9 +18,10 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(express.static("public"))
 
-if (process.env.RESET_DATABASE) {
+if (process.env.RESET_DATABASE === "true") {
   const populateDatabase = async () => {
     await Offer.deleteMany()
+    await Order.deleteMany()
 
     offersData.forEach(item => {
       const newOffer = new Offer(item)
@@ -94,7 +95,7 @@ app.delete("/offers/:id", async (req, res) => {
 // ORDERS
 
 app.get("/orders", async (req, res) => {
-  const orders = await Order.find()
+  const orders = await Order.find().populate({ path: 'offer', select: ['title', "description"] })
   res.json(orders)
 })
 

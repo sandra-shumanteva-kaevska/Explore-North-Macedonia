@@ -18,8 +18,9 @@ const Order = new mongoose.model("Order", {
         required: true,
         minlength: 3
     },
-    offerId: {
-        type: String,
+    offer: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Offer',
         required: true
     },
     createdAt: {
