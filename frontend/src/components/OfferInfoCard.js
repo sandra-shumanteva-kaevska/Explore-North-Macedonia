@@ -18,11 +18,10 @@ const useStyles = makeStyles({
 
 export const OfferInfoCard = (offer) => {
     const classes = useStyles();
-
     return (
         <Card className={classes.root}>
             <CardActionArea>
-                <MuiImageSlider images={offer.images} />
+                <MuiImageSlider images={offer.images.map(image => image.url)} />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">{offer.title}
                     </Typography>

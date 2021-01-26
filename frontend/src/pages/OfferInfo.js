@@ -15,18 +15,18 @@ export const OfferInfo = () => {
         setLoader(true)
         fetch(oferInfoApi)
             .then(response => response.json())
-            .then(json => console.log(json))
+            .then(json => setOffer(json))
             .finally(() => setLoader(false))
     }, [id])
 
-    return null
-    // return loader
-    //     ? <Loader
-    //         type="Hearts"
-    //         color="red"
-    //         height={400}
-    //         width={400}
-    //         className="loader" />
-    //     :
-    //     <OfferInfoCard {...offer} />
+    return loader
+        ? <Loader
+            type="Hearts"
+            color="red"
+            height={400}
+            width={400}
+            className="loader" /> :
+        offer ?
+            <OfferInfoCard {...offer} /> :
+            "Order was not found"
 }
