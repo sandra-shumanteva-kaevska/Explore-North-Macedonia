@@ -24,16 +24,6 @@ const Offer = new mongoose.model("Offer", {
         type: Number,
         default: 0
     },
-    mainImageUrl: {
-        url: {
-            type: String,
-            required: true
-        },
-        alt: {
-            type: String,
-            required: true
-        }
-    },
     images: [{
         url: {
             type: String,

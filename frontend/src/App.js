@@ -1,40 +1,32 @@
-import React, { useState } from "react";
-import LoginForm from "./components/LoginForm";
-import { Status } from "./components/Status";
-import { Profile } from "./components/Profile";
-import { Provider } from "react-redux";
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { user } from "./reducers/user";
-import { useSelector } from 'react-redux';
+import React from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 
-const URL = "http://localhost:8080/users";
-
-const reducer = combineReducers({ user: user.reducer });
-
-const store = configureStore({ reducer });
+import { Categories } from "./pages/Categories"
+import { OffersList } from "./pages/OffersList"
+import { OfferInfo } from "./pages/OfferInfo"
+import { Order } from "./pages/Order"
 
 export const App = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-
-  // To sign up a user.
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    fetch(URL, {
-      method: "POST",
-      body: JSON.stringify({ name, password }),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((json) => console.log(json))
-      .catch((err) => console.log("error:", err));
-  };
   return (
-    <Provider store={store}>
-      <Status />
-      <Profile />
-      <LoginForm />
-    </Provider>
-  );
-};
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Categories />
+        </Route>
+
+        <Route path="/offers" exact>
+          <OffersList />
+        </Route>
+
+        <Route path="/offers/:id" exact>
+          <OfferInfo />
+        </Route>
+
+        <Route path="/orders" exact >
+          <Order />
+        </Route>
+
+      </Switch>
+    </BrowserRouter>
+  )
+}
