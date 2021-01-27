@@ -21,15 +21,15 @@ export const OfferInfoCard = (offer) => {
     return (
         <Card className={classes.root}>
             <CardActionArea>
-                <MuiImageSlider images={offer.images.map(image => image.url)} />
+                <MuiImageSlider arrowsColor="red" images={offer.images.map(image => image.url)} />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">{offer.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p"> {offer.description}
                     </Typography>
-                    <span>{offer.price}</span>
-                    <span>{offer.startDate}</span>
-                    <span>{offer.endDate}</span>
+                    <div>Price: {offer.price} €</div>
+                    <div>Start date: {new Date(offer.startDate).toLocaleDateString()}</div>
+                    <div>End date: {new Date(offer.endDate).toLocaleDateString()}</div>
                 </CardContent>
             </CardActionArea>
             <CardActions>
