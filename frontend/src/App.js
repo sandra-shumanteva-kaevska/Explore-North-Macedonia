@@ -15,13 +15,15 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
   root: {
     height: `100vh`,
-    backgroundColor: 'purple'
+    backgroundColor: 'purple',
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '1'
   },
-
 }));
 
 export const App = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <ThemeProvider theme={myTheme}>
       <Box className={classes.root}>

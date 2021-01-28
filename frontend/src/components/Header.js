@@ -9,9 +9,6 @@ import Menu from 'components/Menu'
 import logo from '../assets/logo.jpg'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -32,8 +29,8 @@ export const Header = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <AppBar className={classes.navBar} position="static">
+        <>
+            <AppBar className={classes.navBar} position="sticky">
                 <Toolbar>
                     <Menu />
                     <Typography variant="h6" className={classes.title}>
@@ -42,6 +39,6 @@ export const Header = () => {
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
-        </div>
+        </>
     );
 }

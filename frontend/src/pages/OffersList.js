@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
 import { useLocation, Link } from 'react-router-dom'
+import { makeStyles } from '@material-ui/core/styles'
 
 import { offersAPI } from 'config'
 import { OfferCard } from 'components/OfferCard'
 import ButtonBack from 'components/ButtonBack'
 import Grid from 'components/Grid'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: '1'
+    },
+}));
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -14,6 +23,7 @@ function useQuery() {
 export const OffersList = () => {
     let offersUrl = `${offersAPI}`
     const query = useQuery();
+    const classes = useStyles()
 
     const [offers, setOffers] = useState([]);
     const [loader, setLoader] = useState(false)
@@ -36,7 +46,7 @@ export const OffersList = () => {
             height={400}
             width={400}
             className="loader" />
-        : <section>
+        : <section className={classes.root}>
             <Grid>
                 {offers.map((offer) =>
                     <OfferCard key={offer._id} {...offer} />

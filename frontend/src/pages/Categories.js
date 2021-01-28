@@ -1,8 +1,18 @@
-import React from "react"
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
 import { CategoryCard } from "../components/CategoryCard"
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: '1'
+    },
+}));
+
 export const Categories = () => {
+    const classes = useStyles()
     const categories = [
         {
             category: "Hiking Tour",
@@ -24,7 +34,7 @@ export const Categories = () => {
         }
     ]
     return <>
-        <section>
+        <section className={classes.root}>
             {categories.map((category) =>
                 <CategoryCard key={category.id} {...category} />
             )}

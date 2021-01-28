@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
-import { offersAPI } from "../config"
-import { OfferInfoCard } from "../components/OfferInfoCard"
+import { offersAPI } from '../config'
+import { OfferInfoCard } from '../components/OfferInfoCard'
 
 export const OfferInfo = () => {
-    const { id } = useParams();
-    const [offer, setOffer] = useState();
+    const { id } = useParams()
+    const [offer, setOffer] = useState()
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {

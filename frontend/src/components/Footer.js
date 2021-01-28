@@ -6,14 +6,11 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        flex: 1,
         justifyContent: 'center',
         flexDirection: 'row',
         background: 'linear-gradient(90deg, rgba(160,150,223,1) 13%, rgba(19,96,186,1) 73%)',
+        bottom: '0px'
     },
-    footer: {
-        bottom: '0px',
-    }
 }));
 
 export const Footer = () => {
@@ -21,7 +18,7 @@ export const Footer = () => {
 
     return (
         <div className={classes.root}>
-            <Typography variant="h6" className={classes.footer}>
+            <Typography variant="h6">
                 <FavoriteIcon fontSize="small" />
                         Made by: Sandra Shumanteva Kaevska 2021 ® <FavoriteIcon fontSize="small" />
             </Typography>
