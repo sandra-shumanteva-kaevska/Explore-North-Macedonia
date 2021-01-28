@@ -6,6 +6,7 @@ import BackspaceTwoToneIcon from '@material-ui/icons/BackspaceTwoTone';
 const useStyles = makeStyles((theme) => ({
     button: {
         margin: theme.spacing(1),
+        backgroundColor: '#585961'
     },
 }));
 

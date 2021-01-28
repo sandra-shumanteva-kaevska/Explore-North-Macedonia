@@ -2,17 +2,23 @@ import React, { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
 import { useLocation, Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
 
 import { offersAPI } from 'config'
 import { OfferCard } from 'components/OfferCard'
 import ButtonBack from 'components/ButtonBack'
-import Grid from 'components/Grid'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    section: {
         display: 'flex',
-        flexDirection: 'column',
-        flexGrow: '1'
+        flexGrow: 1,
+        flexDirection: 'column'
+    },
+    offerList: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center'
     },
 }));
 
@@ -46,12 +52,12 @@ export const OffersList = () => {
             height={400}
             width={400}
             className="loader" />
-        : <section className={classes.root}>
-            <Grid>
+        : <section className={classes.section}>
+            <Box className={classes.offerList}>
                 {offers.map((offer) =>
                     <OfferCard key={offer._id} {...offer} />
                 )}
-            </Grid>
+            </Box>
             <Link to="/"><ButtonBack /></Link>
         </section>
 

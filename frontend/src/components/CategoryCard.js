@@ -9,11 +9,24 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        margin: '20px',
+        width: '300px',
+        height: '350px'
     },
     media: {
-        height: 140,
+        height: '200px',
+        width: '342px'
     },
+    title: {
+        padding: '15px'
+    },
+    content: {
+        padding: '10px',
+        fontSize: '1rem'
+    },
+    actionArea: {
+        textAlign: 'center'
+    }
 });
 
 export const CategoryCard = (category) => {
@@ -22,14 +35,16 @@ export const CategoryCard = (category) => {
     return (
         <Link to={`offers?category=${category.id}`} >
             <Card className={classes.root}>
-                <CardActionArea>
+                <CardActionArea className={classes.actionArea}>
                     <CardMedia
                         className={classes.media}
                         image={category.image}
                         title={category.alt}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">{category.category}
+                        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{category.category}
+                            <Typography className={classes.content} variant="body2" color="textSecondary" component="p"> {category.description}
+                            </Typography>
                         </Typography>
                     </CardContent>
                 </CardActionArea>

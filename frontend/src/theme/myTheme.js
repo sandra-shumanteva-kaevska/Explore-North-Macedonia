@@ -6,7 +6,7 @@ export const myTheme = createMuiTheme({
             'Chilanka',
             'cursive',
         ].join(','),
-    },
+    }
     // overrides: {
     //     MuiAppBar: {
     //         colorDefault: "#3f51b5d1",

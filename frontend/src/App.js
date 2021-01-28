@@ -14,11 +14,13 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: `100vh`,
-    backgroundColor: 'purple',
+    minHeight: `100vh`,
     display: 'flex',
     flexDirection: 'column',
-    flex: '1'
+    flex: '1',
+    background: 'linear-gradient(90deg, rgba(165,158,205,1) 0%, rgba(101,106,112,1) 100%)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
 }));
 
@@ -28,9 +30,9 @@ export const App = () => {
     <ThemeProvider theme={myTheme}>
       <Box className={classes.root}>
         <Header />
+
         <BrowserRouter>
           <Switch>
-
             <Route path="/" exact>
               <Categories />
             </Route>
@@ -46,7 +48,6 @@ export const App = () => {
             <Route path="/orders" exact>
               <Order />
             </Route>
-
           </Switch>
         </BrowserRouter>
 

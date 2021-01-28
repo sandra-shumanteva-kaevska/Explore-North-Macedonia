@@ -9,11 +9,20 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        margin: '20px',
+        width: '300px',
+        height: '350px'
     },
     media: {
-        height: 140,
+        height: '200px',
+        width: '342px'
     },
+    title: {
+        padding: '15px'
+    },
+    actionArea: {
+        textAlign: 'center'
+    }
 });
 
 export const OfferCard = (offer) => {
@@ -22,14 +31,14 @@ export const OfferCard = (offer) => {
     return (
         <Link to={`/offers/${offer._id}`}>
             <Card className={classes.root}>
-                <CardActionArea>
+                <CardActionArea className={classes.actionArea}>
                     <CardMedia
                         className={classes.media}
                         image={offer.images[0].url}
                         title={offer.images[0].alt}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">{offer.title}
+                        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{offer.title}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
