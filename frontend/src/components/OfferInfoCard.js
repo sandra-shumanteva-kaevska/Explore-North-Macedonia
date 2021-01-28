@@ -6,8 +6,8 @@ import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import MuiImageSlider from 'mui-image-slider'
+import { Link } from 'react-router-dom'
 
-import Container from 'components/Container'
 import ButtonBack from 'components/ButtonBack'
 
 const useStyles = makeStyles({
@@ -27,7 +27,7 @@ export const OfferInfoCard = (offer) => {
     const classes = useStyles();
 
     return (
-        <Container>
+        <>
             <Card className={classes.root}>
                 <CardActionArea>
 
@@ -46,7 +46,7 @@ export const OfferInfoCard = (offer) => {
                 <CardActions>
                 </CardActions>
             </Card>
-            <ButtonBack>Back</ButtonBack>
-        </Container>
+            <Link to="/"><ButtonBack /></Link>
+        </>
     );
 }

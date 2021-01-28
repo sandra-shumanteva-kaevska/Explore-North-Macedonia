@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         justifyContent: 'center',
         flexDirection: 'row',
-        backgroundColor: '#3f51b5d1',
+        background: 'linear-gradient(90deg, rgba(160,150,223,1) 13%, rgba(19,96,186,1) 73%)',
     },
     footer: {
-        bottom: '0px'
+        bottom: '0px',
     }
 }));
 

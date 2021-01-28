@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 
-import { offersAPI } from '../config'
-import { OfferCard } from '../components/OfferCard'
+import { offersAPI } from 'config'
+import { OfferCard } from 'components/OfferCard'
 import ButtonBack from 'components/ButtonBack'
 import Grid from 'components/Grid'
 
@@ -42,7 +42,7 @@ export const OffersList = () => {
                     <OfferCard key={offer._id} {...offer} />
                 )}
             </Grid>
-            <ButtonBack></ButtonBack>
+            <Link to="/"><ButtonBack /></Link>
         </section>
 
 }

@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     imgLogo: {
         height: '45px',
         width: '45px',
+    },
+    navBar: {
+        background: 'linear-gradient(90deg, rgba(160,150,223,1) 13%, rgba(19,96,186,1) 73%)',
     }
 }));
 
@@ -30,11 +33,11 @@ export const Header = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar className={classes.navBar} position="static">
                 <Toolbar>
                     <Menu />
                     <Typography variant="h6" className={classes.title}>
-                        Explore North Macedonia <img src={logo} className={classes.imgLogo} />
+                        Explore North Macedonia <img src={logo} alt='Point finger' className={classes.imgLogo} />
                     </Typography>
                     <Button color="inherit">Login</Button>
                 </Toolbar>

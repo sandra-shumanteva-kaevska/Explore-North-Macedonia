@@ -9,6 +9,9 @@ import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike'
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople'
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 import HomeIcon from '@material-ui/icons/Home'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle'
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary'
 
 const StyledMenu = withStyles({
     paper: {
@@ -74,22 +77,47 @@ export default function CustomizedMenus() {
             >
                 <StyledMenuItem>
                     <ListItemIcon>
-                        <DirectionsBikeIcon fontSize="small" />
+                        <SupervisedUserCircleIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="Biking Tour" />
+                    <ListItemText primary="About us" />
                 </StyledMenuItem>
-                <StyledMenuItem>
+
+
+                <StyledMenuItem component="a" href="/offers">
+                    <ListItemIcon>
+                        <LocalLibraryIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText primary="All Offers" />
+                </StyledMenuItem>
+
+                <StyledMenuItem component="a" href="/offers?category=hiking-tours">
                     <ListItemIcon>
                         <NaturePeopleIcon fontSize="small" />
                     </ListItemIcon>
                     <ListItemText primary="Hiking Tour" />
                 </StyledMenuItem>
-                <StyledMenuItem>
+
+                <StyledMenuItem component="a" href="/offers?category=biking-tours">
+                    <ListItemIcon>
+                        <DirectionsBikeIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText primary="Biking Tour" />
+                </StyledMenuItem>
+
+                <StyledMenuItem component="a" href="/offers?category=culture-tours">
                     <ListItemIcon>
                         <AccountBalanceIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="Coulture Tour" />
+                    <ListItemText primary="Culture Tour" />
                 </StyledMenuItem>
+
+                <StyledMenuItem>
+                    <ListItemIcon>
+                        <ContactMailIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText primary="Contact us" />
+                </StyledMenuItem>
+
             </StyledMenu>
         </div>
     );
