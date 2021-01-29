@@ -11,6 +11,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { myTheme } from './theme/myTheme'
 import { makeStyles } from '@material-ui/core/styles'
+import background from './assets/background.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     flex: '1',
-    background: 'linear-gradient(90deg, rgba(165,158,205,1) 0%, rgba(101,106,112,1) 100%)',
+    backgroundImage: `url(${background})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
