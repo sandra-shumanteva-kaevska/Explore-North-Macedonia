@@ -1,7 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
+import { render } from 'react-dom'
 
 import { Categories } from './pages/Categories'
 import { OffersList } from './pages/OffersList'
@@ -12,6 +13,7 @@ import { Footer } from './components/Footer'
 import { myTheme } from './theme/myTheme'
 import { makeStyles } from '@material-ui/core/styles'
 import background from './assets/background.jpg'
+import { ButtonBack } from 'components/ButtonBack'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +34,7 @@ export const App = () => {
       <Box className={classes.root}>
         <Header />
 
-        <BrowserRouter>
+        <Router>
           <Switch>
             <Route path="/" exact>
               <Categories />
@@ -40,20 +42,23 @@ export const App = () => {
 
             <Route path="/offers" exact>
               <OffersList />
+              <ButtonBack />
             </Route>
 
             <Route path="/offers/:id" exact>
               <OfferInfo />
+              <ButtonBack />
             </Route>
 
             <Route path="/orders" exact>
               <Order />
+              <ButtonBack />
             </Route>
           </Switch>
-        </BrowserRouter>
-
+        </Router>
         <Footer />
       </Box>
-    </ThemeProvider>
+    </ThemeProvider >
   )
 }
+render(<App />, document.getElementById("root"))

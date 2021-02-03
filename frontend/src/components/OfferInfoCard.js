@@ -6,7 +6,8 @@ import Box from '@material-ui/core/Box'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 
-import ButtonBack from 'components/ButtonBack'
+import { ButtonBack } from 'components/ButtonBack'
+import ButtonBuy from 'components/ButtonBuy'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#a4aae473',
         width: '753px',
     },
+
     container: {
         display: 'flex',
         flexDirection: 'column',
@@ -28,7 +30,17 @@ const useStyles = makeStyles((theme) => ({
         margin: '20px',
     },
     content: {
-        width: '753px'
+        width: '753px',
+        color: 'white',
+    },
+    transparency: {
+        backgroundColor: '#00000075',
+        padding: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        margin: '20px',
     },
     price: {
         color: 'red',
@@ -45,14 +57,16 @@ export const OfferInfoCard = (offer) => {
     return (
         <Box className={classes.container}>
             <Box className={classes.content}>
-                <Typography gutterBottom variant="h5" component="h2">{offer.title}
-                </Typography>
-                <Typography variant="body2" component="p"> {offer.description}
-                </Typography>
-                <Box className={classes.price}>Price: {offer.price} €</Box>
-                <Box className={classes.date}>Start date: {new Date(offer.startDate).toLocaleDateString()}</Box>
-                <Box className={classes.date}>End date: {new Date(offer.endDate).toLocaleDateString()}</Box>
-                <Link to="/"><ButtonBack /></Link>
+                <Box className={classes.transparency}>
+                    <Typography gutterBottom variant="h5" component="h2">{offer.title}
+                    </Typography>
+                    <Typography variant="body2" component="p"> {offer.description}
+                    </Typography>
+                    <Box className={classes.price}>Price: {offer.price} €</Box>
+                    <Box className={classes.date}>Start date: {new Date(offer.startDate).toLocaleDateString()}</Box>
+                    <Box className={classes.date}>End date: {new Date(offer.endDate).toLocaleDateString()}</Box>
+                    <Link to="/orders"><ButtonBuy /></Link>
+                </Box>
             </Box>
             <Box className={classes.root}>
                 <GridList cellHeight={160} cols={3}>

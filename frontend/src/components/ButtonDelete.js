@@ -13,13 +13,15 @@ export default function IconLabelButtons() {
     const classes = useStyles();
 
     return (
-        <Button
-            variant="contained"
-            color="secondary"
-            className={classes.button}
-            startIcon={<DeleteIcon />}
-        >
-            Delete
+        <div>
+            <Button
+                variant="contained"
+                color="secondary"
+                className={classes.button}
+                startIcon={<DeleteIcon />}
+            >
+                Delete
         </Button>
+        </div>
     )
 }

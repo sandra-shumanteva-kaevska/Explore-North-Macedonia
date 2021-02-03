@@ -1,7 +1,9 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import BackspaceTwoToneIcon from '@material-ui/icons/BackspaceTwoTone';
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles'
+import BackspaceTwoToneIcon from '@material-ui/icons/BackspaceTwoTone'
+import { useHistory } from 'react-router-dom'
+
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -10,12 +12,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function IconLabelButtons() {
+export const ButtonBack = () => {
     const classes = useStyles();
+    let history = useHistory()
 
     return (
         <div>
             <Button
+                onClick={() => history.goBack()}
                 variant="contained"
                 color="default"
                 className={classes.button}

@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box'
 
 import { offersAPI } from 'config'
 import { OfferCard } from 'components/OfferCard'
-import ButtonBack from 'components/ButtonBack'
+import { ButtonBack } from 'components/ButtonBack'
 
 const useStyles = makeStyles((theme) => ({
     section: {
@@ -18,7 +18,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexGrow: '1'
     },
 }));
 
@@ -58,7 +60,6 @@ export const OffersList = () => {
                     <OfferCard key={offer._id} {...offer} />
                 )}
             </Box>
-            <Link to="/"><ButtonBack /></Link>
         </section>
 
 }
