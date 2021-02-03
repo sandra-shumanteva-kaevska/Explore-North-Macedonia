@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     button: {
         margin: theme.spacing(1),
-        backgroundColor: '#585961'
+        backgroundColor: '#3ad44dd6'
     },
 }));
 
