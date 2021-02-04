@@ -29,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
 
 export const App = () => {
   const classes = useStyles()
+
+  const postOrder = () => {
+
+  }
+
   return (
     <ThemeProvider theme={myTheme}>
       <Box className={classes.root}>
@@ -50,8 +55,8 @@ export const App = () => {
               <ButtonBack />
             </Route>
 
-            <Route path="/orders" exact>
-              <Order />
+            <Route path="/offers/:id/order" exact>
+              <Order onFormSubmited={postOrder} />
               <ButtonBack />
             </Route>
           </Switch>

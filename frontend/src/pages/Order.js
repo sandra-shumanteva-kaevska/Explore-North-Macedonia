@@ -1,28 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
+import { Button } from '@material-ui/core'
+import SaveAltIcon from '@material-ui/icons/SaveAlt'
+import { useParams } from 'react-router-dom'
 
-import { ButtonBack } from 'components/ButtonBack'
-import ButtonBuy from 'components/ButtonBuy'
-import ButtonDelete from 'components/ButtonDelete'
+import { OfferInfoCard } from '../components/OfferInfoCard'
+import { offersAPI } from '../config'
+import { Slider1 } from 'components/Slider'
 
 const useStyles = makeStyles((theme) => ({
     card: {
         display: 'flex',
         '& > *': {
             margin: theme.spacing(1),
-            width: theme.spacing(16),
-            height: theme.spacing(16),
         },
         flexGrow: 1,
         flexDirection: 'column',
         alignItems: 'center'
+
     },
     orderContainer: {
         display: 'flex',
-        flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
@@ -40,25 +40,99 @@ const useStyles = makeStyles((theme) => ({
     button: {
         display: 'flex',
         flexDirection: 'row'
+    },
+    submitButton: {
+        backgroundColor: '#2ca52c'
+    },
+    title: {
+        color: 'white',
+        textShadow: '2px 2px #797575'
+
     }
 }))
 
-export const Order = () => {
+export const Order = ({ onFormSubmited }) => {
     const classes = useStyles()
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [mail, setMail] = useState('')
+    const { id } = useParams()
+    const [offer, setOffer] = useState()
 
-    return (
+    useEffect(() => {
+        const oferInfoApi = `${offersAPI}/${id}`
+        fetch(oferInfoApi)
+            .then(response => response.json())
+            .then(json => setOffer(json))
+    }, [id])
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        onFormSubmited({ firstName, lastName, mail })
+        setFirstName('')
+        setLastName('')
+        setMail('')
+    }
+
+    return offer ?
         <div className={classes.card}>
+            <h3 className={classes.title}>You choose this offer:</h3>
+            <OfferInfoCard {...offer} />
             <Paper className={classes.orderContainer} elevation={3}>
-                <form className={classes.form} noValidate autoComplete="off">
-                    <TextField id='firstName' label="First Name" variant="outlined" />
-                    <TextField id='lastName' label="Last Name" variant="outlined" />
-                    <TextField id='email' label="Email Adress" variant="outlined" />
+                <Slider1 />
+                <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
+                    <TextField
+                        id='firstName'
+                        label='First Name'
+                        variant='outlined'
+                        value={firstName}
+                        required
+                        inputProps={{
+                            minLength: 3,
+                            maxLength: 50,
+                        }}
+                        type='text'
+                        onChange={event => setFirstName(event.target.value)}
+                    />
+
+                    <TextField
+                        id='lastName'
+                        label='Last Name'
+                        variant='outlined'
+                        value={lastName}
+                        required
+                        inputProps={{
+                            minLength: 3,
+                            maxLength: 50,
+                        }}
+                        type='text'
+                        onChange={event => setLastName(event.target.value)}
+                    />
+
+                    <TextField
+                        id='email'
+                        label='Email Adress'
+                        variant='outlined'
+                        value={mail}
+                        required
+                        type='email'
+                        pattern='.+@globex.com'
+                        inputProps={{
+                            minLength: 8,
+                        }}
+                        onChange={event => setMail(event.target.value)}
+                    />
+
+                    <Button
+                        variant='contained'
+                        className={classes.submitButton}
+                        type='submit'
+                        startIcon={<SaveAltIcon />}>
+                        Submit
+                    </Button>
                 </form>
-                <Box className={classes.button}>
-                    <ButtonBuy />
-                    <ButtonDelete />
-                </Box>
             </Paper>
         </div>
-    )
+        :
+        "Order was not found"
 }

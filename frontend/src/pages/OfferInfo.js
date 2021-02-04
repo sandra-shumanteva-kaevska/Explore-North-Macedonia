@@ -27,6 +27,6 @@ export const OfferInfo = () => {
             width={400}
             className="loader" /> :
         offer ?
-            <OfferInfoCard {...offer} /> :
+            <OfferInfoCard showDetails={true} {...offer} /> :
             "Order was not found"
 }

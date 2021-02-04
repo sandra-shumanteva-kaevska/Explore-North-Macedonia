@@ -6,7 +6,6 @@ import Box from '@material-ui/core/Box'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 
-import { ButtonBack } from 'components/ButtonBack'
 import ButtonBuy from 'components/ButtonBuy'
 
 const useStyles = makeStyles((theme) => ({
@@ -44,16 +43,16 @@ const useStyles = makeStyles((theme) => ({
     },
     price: {
         color: 'red',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textShadow: '1px 0px'
     },
     date: {
         fontWeight: 'bold'
     },
 }));
 
-export const OfferInfoCard = (offer) => {
+export const OfferInfoCard = ({ showDetails, ...offer }) => {
     const classes = useStyles()
-
     return (
         <Box className={classes.container}>
             <Box className={classes.content}>
@@ -65,10 +64,10 @@ export const OfferInfoCard = (offer) => {
                     <Box className={classes.price}>Price: {offer.price} €</Box>
                     <Box className={classes.date}>Start date: {new Date(offer.startDate).toLocaleDateString()}</Box>
                     <Box className={classes.date}>End date: {new Date(offer.endDate).toLocaleDateString()}</Box>
-                    <Link to="/orders"><ButtonBuy /></Link>
+                    {showDetails && (<Link to={`/offers/${offer._id}/order`}><ButtonBuy /></Link>)}
                 </Box>
             </Box>
-            <Box className={classes.root}>
+            {showDetails && (<Box className={classes.root}>
                 <GridList cellHeight={160} cols={3}>
                     {offer.images.map((image) => (
                         <GridListTile key={image.url} cols={1}>
@@ -76,8 +75,7 @@ export const OfferInfoCard = (offer) => {
                         </GridListTile>
                     ))}
                 </GridList>
-            </Box>
-
+            </Box>)}
         </Box>
     );
 }

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
 import { offersAPI } from 'config'
 import { OfferCard } from 'components/OfferCard'
-import { ButtonBack } from 'components/ButtonBack'
 
 const useStyles = makeStyles((theme) => ({
     section: {
