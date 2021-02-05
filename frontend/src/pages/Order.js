@@ -93,7 +93,7 @@ export const Order = ({ onFormSubmited }) => {
             <h3 className={classes.title}>You choose this offer:</h3>
             <OfferInfoCard {...offer} />
             <Paper className={classes.orderContainer} elevation={3}>
-                <Slider1 onChange={(x) => { setQuantity(x) }} />
+                <Slider1 onChange={(x) => { setQuantity(x) }} defaultValue={1} />
                 <Box>
                     <p className={classes.total}>Total:</p>
                     <span className={classes.totalBox}>{offer.price * quantity} €</span>

@@ -67,14 +67,14 @@ const PrettoSlider = withStyles({
 
 })(Slider);
 
-export const Slider1 = ({ onChange }) => {
+export const Slider1 = ({ onChange, defaultValue }) => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <div className={classes.margin} />
             <Typography gutterBottom className={classes.sliderTitle}>Numer of persons: </Typography>
-            <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={1} onChange={(event, newValue) => onChange(newValue)} />
+            <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} onChange={(event, newValue) => onChange(newValue)} />
         </div>
     )
 }
