@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper'
 import { Button } from '@material-ui/core'
 import SaveAltIcon from '@material-ui/icons/SaveAlt'
 import { useParams } from 'react-router-dom'
+import Box from '@material-ui/core/Box'
 
 import { OfferInfoCard } from '../components/OfferInfoCard'
 import { offersAPI } from '../config'
@@ -47,7 +48,19 @@ const useStyles = makeStyles((theme) => ({
     title: {
         color: 'white',
         textShadow: '2px 2px #797575'
-
+    },
+    total: {
+        color: '#2f0fde',
+        fontWeight: 'bold',
+        textShadow: '1px 0px',
+        fontSize: 'x-large'
+    },
+    totalBox: {
+        backgroundColor: '#a994c7',
+        width: '20px',
+        height: '20px',
+        fontWeight: 'bolder',
+        padding: '5px',
     }
 }))
 
@@ -58,6 +71,7 @@ export const Order = ({ onFormSubmited }) => {
     const [mail, setMail] = useState('')
     const { id } = useParams()
     const [offer, setOffer] = useState()
+    const [quantity, setQuantity] = useState(1)
 
     useEffect(() => {
         const oferInfoApi = `${offersAPI}/${id}`
@@ -79,7 +93,11 @@ export const Order = ({ onFormSubmited }) => {
             <h3 className={classes.title}>You choose this offer:</h3>
             <OfferInfoCard {...offer} />
             <Paper className={classes.orderContainer} elevation={3}>
-                <Slider1 />
+                <Slider1 onChange={(x) => { setQuantity(x) }} />
+                <Box>
+                    <p className={classes.total}>Total:</p>
+                    <span className={classes.totalBox}>{offer.price * quantity} €</span>
+                </Box>
                 <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
                     <TextField
                         id='firstName'
