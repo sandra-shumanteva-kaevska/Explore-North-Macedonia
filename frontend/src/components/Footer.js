@@ -2,6 +2,7 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import { makeStyles } from '@material-ui/core/styles'
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,13 +18,11 @@ export const Footer = () => {
     const classes = useStyles()
 
     return (
-        <div className={classes.root}>
+        <Box className={classes.root}>
             <Typography variant="h6">
                 <FavoriteIcon fontSize="small" />
                         Made by: Sandra Shumanteva Kaevska 2021 ® <FavoriteIcon fontSize="small" />
             </Typography>
-
-        </div>
+        </Box>
     )
-
 }

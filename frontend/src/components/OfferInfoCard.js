@@ -2,11 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
-import Box from '@material-ui/core/Box'
+import { Box, Button } from '@material-ui/core'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
-
-import ButtonBuy from 'components/ButtonBuy'
+import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,7 +63,21 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
                     <Box className={classes.price}>Price: {offer.price} €</Box>
                     <Box className={classes.date}>Start date: {new Date(offer.startDate).toLocaleDateString()}</Box>
                     <Box className={classes.date}>End date: {new Date(offer.endDate).toLocaleDateString()}</Box>
-                    {showDetails && (<Link to={`/offers/${offer._id}/order`}><ButtonBuy /></Link>)}
+                    {showDetails && (
+                        <>
+                            <Box mt={1} />
+                            <Link to={`/offers/${offer._id}/order`}>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    className={classes.button}
+                                    endIcon={<ShoppingCartTwoToneIcon />}
+                                >
+                                    Buy
+                                </Button>
+                            </Link>
+                        </>
+                    )}
                 </Box>
             </Box>
             {showDetails && (<Box className={classes.root}>

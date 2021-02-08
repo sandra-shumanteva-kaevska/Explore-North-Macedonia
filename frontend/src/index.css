@@ -1,6 +1,10 @@
 body {
   margin: 0;
-  font-family: "Hachi Maru Pop", cursive;
+  font-family: "Chilanka", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.loader {
+  text-align: center;
 }

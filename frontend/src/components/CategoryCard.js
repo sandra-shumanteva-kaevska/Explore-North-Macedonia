@@ -50,6 +50,5 @@ export const CategoryCard = (category) => {
                 </CardActionArea>
             </Card>
         </Link >
-
-    );
+    )
 }

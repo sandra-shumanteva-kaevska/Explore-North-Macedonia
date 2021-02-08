@@ -35,6 +35,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to Explore North Macedonia")
 })
 
+// ---------------------------- OFFERS ----------------------------
+
 app.get("/offers", async (req, res) => {
   const query = {}
   if (req.query.hasOwnProperty("category")) {
@@ -92,11 +94,24 @@ app.delete("/offers/:id", async (req, res) => {
   }
 })
 
-// ORDERS
+// ---------------------------- ORDERS ----------------------------
 
 app.get("/orders", async (req, res) => {
   const orders = await Order.find().populate({ path: 'offer', select: ['title', "description"] })
   res.json(orders)
+})
+
+app.get("/orders/:id", async (req, res) => {
+  try {
+    const order = await Order.findById(req.params.id).populate({ path: 'offer', select: ['title', "description"] }).exec()
+
+    order
+      ? res.status(200).json(order)
+      : res.status(404).json({ message: "The order is not found" })
+  }
+  catch (err) {
+    res.status(400).json({ message: "Something went wrong", err: err.errors })
+  }
 })
 
 app.post("/orders", async (req, res) => {

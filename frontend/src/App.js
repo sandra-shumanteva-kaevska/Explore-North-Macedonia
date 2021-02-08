@@ -14,6 +14,7 @@ import { myTheme } from './theme/myTheme'
 import { makeStyles } from '@material-ui/core/styles'
 import background from './assets/background.jpg'
 import { ButtonBack } from 'components/ButtonBack'
+import { OrderInfo } from './pages/OdrerInfo'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,10 +30,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const App = () => {
   const classes = useStyles()
-
-  const postOrder = () => {
-
-  }
 
   return (
     <ThemeProvider theme={myTheme}>
@@ -56,13 +53,19 @@ export const App = () => {
             </Route>
 
             <Route path="/offers/:id/order" exact>
-              <Order onFormSubmited={postOrder} />
+              <Order />
               <ButtonBack />
             </Route>
+
+            <Route path="/order/:id" exact>
+              <OrderInfo />
+            </Route>
+
           </Switch>
         </Router>
+
         <Footer />
-      </Box>
+      </Box >
     </ThemeProvider >
   )
 }

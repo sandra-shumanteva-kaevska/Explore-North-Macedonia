@@ -18,6 +18,10 @@ const Order = new mongoose.model("Order", {
         required: true,
         minlength: 3
     },
+    quantity: {
+        type: Number,
+        default: 1
+    },
     offer: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Offer',

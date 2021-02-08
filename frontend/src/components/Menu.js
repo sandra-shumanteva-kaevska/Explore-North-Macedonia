@@ -5,13 +5,12 @@ import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
-import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike'
-import NaturePeopleIcon from '@material-ui/icons/NaturePeople'
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 import HomeIcon from '@material-ui/icons/Home'
 import ContactMailIcon from '@material-ui/icons/ContactMail'
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle'
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary'
+
+import { categories } from '../config'
 
 const StyledMenu = withStyles({
     paper: {
@@ -44,7 +43,7 @@ const StyledMenuItem = withStyles((theme) => ({
     },
 }))(MenuItem)
 
-export default function CustomizedMenus() {
+export const MyMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -56,7 +55,7 @@ export default function CustomizedMenus() {
     }
 
     return (
-        <div>
+        <>
             <Button
                 aria-controls="customized-menu"
                 aria-haspopup="true"
@@ -66,7 +65,7 @@ export default function CustomizedMenus() {
             >   <ListItemIcon>
                     <HomeIcon fontSize="small" />
                 </ListItemIcon>
-                Home Menu
+                Menu
             </Button>
             <StyledMenu
                 id="customized-menu"
@@ -75,13 +74,12 @@ export default function CustomizedMenus() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <StyledMenuItem>
+                <StyledMenuItem component="a" href="/" >
                     <ListItemIcon>
-                        <SupervisedUserCircleIcon fontSize="small" />
+                        <LocalLibraryIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="About us" />
+                    <ListItemText primary="Home" />
                 </StyledMenuItem>
-
 
                 <StyledMenuItem component="a" href="/offers">
                     <ListItemIcon>
@@ -90,25 +88,20 @@ export default function CustomizedMenus() {
                     <ListItemText primary="All Offers" />
                 </StyledMenuItem>
 
-                <StyledMenuItem component="a" href="/offers?category=hiking-tours">
-                    <ListItemIcon>
-                        <NaturePeopleIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Hiking Tour" />
-                </StyledMenuItem>
+                {categories.map((item) =>
+                    <StyledMenuItem key={item.id} component="a" href={`/offers?category=${item.id}`}>
+                        <ListItemIcon>
+                            {item.icon}
+                        </ListItemIcon>
+                        <ListItemText primary={item.category} />
+                    </StyledMenuItem>
+                )}
 
-                <StyledMenuItem component="a" href="/offers?category=biking-tours">
+                <StyledMenuItem>
                     <ListItemIcon>
-                        <DirectionsBikeIcon fontSize="small" />
+                        <SupervisedUserCircleIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="Biking Tour" />
-                </StyledMenuItem>
-
-                <StyledMenuItem component="a" href="/offers?category=culture-tours">
-                    <ListItemIcon>
-                        <AccountBalanceIcon fontSize="small" />
-                    </ListItemIcon>
-                    <ListItemText primary="Culture Tour" />
+                    <ListItemText primary="About us" />
                 </StyledMenuItem>
 
                 <StyledMenuItem>
@@ -119,6 +112,6 @@ export default function CustomizedMenus() {
                 </StyledMenuItem>
 
             </StyledMenu>
-        </div>
+        </>
     );
 }

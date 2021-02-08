@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
-import { offersAPI } from 'config'
+import { baseAPI } from '../config'
 import { OfferCard } from 'components/OfferCard'
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +28,6 @@ function useQuery() {
 }
 
 export const OffersList = () => {
-    let offersUrl = `${offersAPI}`
     const query = useQuery();
     const classes = useStyles()
 
@@ -36,6 +35,7 @@ export const OffersList = () => {
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
+        let offersUrl = `${baseAPI}/offers`
         setLoader(true)
         if (query.get("category")) {
             offersUrl += `?category=${query.get("category")}`
@@ -44,6 +44,7 @@ export const OffersList = () => {
             .then(response => response.json())
             .then(json => setOffers(json))
             .finally(() => setLoader(false))
+        // eslint-disable-next-line
     }, [])
 
     return loader

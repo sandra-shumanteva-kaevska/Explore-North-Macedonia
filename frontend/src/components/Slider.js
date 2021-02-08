@@ -1,24 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        width: 300 + theme.spacing(3) * 2,
-    },
-    margin: {
-        height: theme.spacing(3),
-    },
-    sliderTitle: {
-        color: '#2f0fde',
-        fontWeight: 'bold',
-        textShadow: '1px 0px',
-        fontSize: 'x-large'
-    }
-}));
 
 function ValueLabelComponent(props) {
     const { children, open, value } = props;
@@ -36,7 +20,7 @@ ValueLabelComponent.propTypes = {
     value: PropTypes.number.isRequired,
 };
 
-const PrettoSlider = withStyles({
+export const PrettoSlider = withStyles({
     root: {
         color: '#2f0fde',
         height: 8,
@@ -66,15 +50,3 @@ const PrettoSlider = withStyles({
     },
 
 })(Slider);
-
-export const Slider1 = ({ onChange, defaultValue }) => {
-    const classes = useStyles();
-
-    return (
-        <div className={classes.root}>
-            <div className={classes.margin} />
-            <Typography gutterBottom className={classes.sliderTitle}>Numer of persons: </Typography>
-            <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={defaultValue} onChange={(event, newValue) => onChange(newValue)} />
-        </div>
-    )
-}
