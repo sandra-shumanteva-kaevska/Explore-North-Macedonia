@@ -11,6 +11,7 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle'
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary'
 
 import { categories } from '../config'
+import { Link } from 'react-router-dom'
 
 const StyledMenu = withStyles({
     paper: {
@@ -67,6 +68,7 @@ export const MyMenu = () => {
                 </ListItemIcon>
                 Menu
             </Button>
+
             <StyledMenu
                 id="customized-menu"
                 anchorEl={anchorEl}
@@ -74,14 +76,15 @@ export const MyMenu = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <StyledMenuItem component="a" href="/" >
+
+                <StyledMenuItem component={Link} to="/">
                     <ListItemIcon>
                         <LocalLibraryIcon fontSize="small" />
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </StyledMenuItem>
 
-                <StyledMenuItem component="a" href="/offers">
+                <StyledMenuItem component={Link} to="/offers">
                     <ListItemIcon>
                         <LocalLibraryIcon fontSize="small" />
                     </ListItemIcon>
@@ -89,7 +92,7 @@ export const MyMenu = () => {
                 </StyledMenuItem>
 
                 {categories.map((item) =>
-                    <StyledMenuItem key={item.id} component="a" href={`/offers?category=${item.id}`}>
+                    <StyledMenuItem component={Link} to={`/offers?category=${item.id}`} key={item.id} >
                         <ListItemIcon>
                             {item.icon}
                         </ListItemIcon>

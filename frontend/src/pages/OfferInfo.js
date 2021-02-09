@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import Loader from 'react-loader-spinner'
 import { useParams } from 'react-router-dom'
 
 import { baseAPI } from '../config'
 import { OfferInfoCard } from '../components/OfferInfoCard'
 import { Error } from '../components/Error'
 
-export const OfferInfo = () => {
+export const OfferInfo = ({ showLoader }) => {
     const { id } = useParams()
     const [offer, setOffer] = useState()
-    const [loader, setLoader] = useState(false)
     const [error, setError] = useState('')
 
     useEffect(() => {
         const oferInfoApi = `${baseAPI}/offers/${id}`
-        setLoader(true)
+        showLoader(true)
         fetch(oferInfoApi)
             .then((response) => {
                 if (!response.ok) {
@@ -27,17 +25,11 @@ export const OfferInfo = () => {
             .catch((error) => {
                 setError('Offer was not found')
             })
-            .finally(() => setLoader(false))
+            .finally(() => showLoader(false))
+        // eslint-disable-next-line
     }, [id])
 
-    return loader
-        ? <Loader
-            type="Hearts"
-            color="red"
-            height={400}
-            width={400}
-            className="loader" /> :
-        offer ?
-            <OfferInfoCard showDetails={true} {...offer} /> :
-            <Error>{error}</Error>
+    return offer ?
+        <OfferInfoCard showDetails={true} {...offer} /> :
+        <Error>{error}</Error>
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Loader from 'react-loader-spinner'
 import { useLocation } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
@@ -27,39 +26,31 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-export const OffersList = () => {
+export const OffersList = ({ showLoader }) => {
     const query = useQuery();
     const classes = useStyles()
 
     const [offers, setOffers] = useState([]);
-    const [loader, setLoader] = useState(false)
 
     useEffect(() => {
         let offersUrl = `${baseAPI}/offers`
-        setLoader(true)
+        showLoader(true)
         if (query.get("category")) {
             offersUrl += `?category=${query.get("category")}`
         }
         fetch(offersUrl)
             .then(response => response.json())
             .then(json => setOffers(json))
-            .finally(() => setLoader(false))
+            .finally(() => showLoader(false))
         // eslint-disable-next-line
-    }, [])
+    }, [query.get("category")])
 
-    return loader
-        ? <Loader
-            type="Hearts"
-            color="red"
-            height={400}
-            width={400}
-            className="loader" />
-        : <section className={classes.section}>
-            <Box className={classes.offerList}>
-                {offers.map((offer) =>
-                    <OfferCard key={offer._id} {...offer} />
-                )}
-            </Box>
-        </section>
+    return <section className={classes.section}>
+        <Box className={classes.offerList}>
+            {offers.map((offer) =>
+                <OfferCard key={offer._id} {...offer} />
+            )}
+        </Box>
+    </section>
 
 }

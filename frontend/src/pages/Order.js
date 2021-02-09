@@ -6,7 +6,6 @@ import { Button, Typography } from '@material-ui/core'
 import SaveAltIcon from '@material-ui/icons/SaveAlt'
 import { useParams, useHistory } from 'react-router-dom'
 import Box from '@material-ui/core/Box'
-import Loader from 'react-loader-spinner'
 
 import { OfferInfoCard } from '../components/OfferInfoCard'
 import { baseAPI } from '../config'
@@ -75,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export const Order = ({ onFormSubmited }) => {
+export const Order = ({ showLoader }) => {
     const classes = useStyles()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -83,14 +82,13 @@ export const Order = ({ onFormSubmited }) => {
     const { id } = useParams()
     const [offer, setOffer] = useState()
     const [quantity, setQuantity] = useState(1)
-    const [loader, setLoader] = useState(false)
     const [error, setError] = useState('')
     const [buttonDisable, setButtonDisable] = useState(false)
 
     let history = useHistory()
 
     useEffect(() => {
-        setLoader(true)
+        showLoader(true)
         fetch(`${baseAPI}/offers/${id}`)
             .then((response) => {
                 if (!response.ok) {
@@ -103,7 +101,8 @@ export const Order = ({ onFormSubmited }) => {
             .catch((error) => {
                 setError('Offer was not found')
             })
-            .finally(() => setLoader(false))
+            .finally(() => showLoader(false))
+        // eslint-disable-next-line
     }, [id])
 
     const postOrder = (data) => {
@@ -134,83 +133,76 @@ export const Order = ({ onFormSubmited }) => {
         setMail('')
     }
 
-    return loader
-        ? <Loader
-            type="Hearts"
-            color="red"
-            height={400}
-            width={400}
-            className="loader" /> :
-        offer ?
-            <div className={classes.card}>
-                <Typography variant="h3" className={classes.title}>You choose this offer:</Typography>
-                <OfferInfoCard {...offer} />
-                <Paper className={classes.orderContainer} elevation={3}>
+    return offer ?
+        <div className={classes.card}>
+            <Typography variant="h3" className={classes.title}>You choose this offer:</Typography>
+            <OfferInfoCard {...offer} />
+            <Paper className={classes.orderContainer} elevation={3}>
 
-                    <Box className={classes.sliderBox}>
-                        <Typography gutterBottom className={classes.sliderTitle}>Numer of persons:</Typography>
-                        <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={1} onChange={(event, newValue) => setQuantity(newValue)} />
-                    </Box>
+                <Box className={classes.sliderBox}>
+                    <Typography gutterBottom className={classes.sliderTitle}>Numer of persons:</Typography>
+                    <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={1} onChange={(event, newValue) => setQuantity(newValue)} />
+                </Box>
 
-                    <Box>
-                        <p className={classes.total}>Total:</p>
-                        <span className={classes.totalBox}>{offer.price * quantity} €</span>
-                    </Box>
-                    <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
-                        <TextField
-                            id='firstName'
-                            label='First Name'
-                            variant='outlined'
-                            value={firstName}
-                            required
-                            inputProps={{
-                                minLength: 3,
-                                maxLength: 50,
-                            }}
-                            type='text'
-                            onChange={event => setFirstName(event.target.value)}
-                        />
+                <Box>
+                    <p className={classes.total}>Total:</p>
+                    <span className={classes.totalBox}>{offer.price * quantity} €</span>
+                </Box>
+                <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
+                    <TextField
+                        id='firstName'
+                        label='First Name'
+                        variant='outlined'
+                        value={firstName}
+                        required
+                        inputProps={{
+                            minLength: 3,
+                            maxLength: 50,
+                        }}
+                        type='text'
+                        onChange={event => setFirstName(event.target.value)}
+                    />
 
-                        <TextField
-                            id='lastName'
-                            label='Last Name'
-                            variant='outlined'
-                            value={lastName}
-                            required
-                            inputProps={{
-                                minLength: 3,
-                                maxLength: 50,
-                            }}
-                            type='text'
-                            onChange={event => setLastName(event.target.value)}
-                        />
+                    <TextField
+                        id='lastName'
+                        label='Last Name'
+                        variant='outlined'
+                        value={lastName}
+                        required
+                        inputProps={{
+                            minLength: 3,
+                            maxLength: 50,
+                        }}
+                        type='text'
+                        onChange={event => setLastName(event.target.value)}
+                    />
 
-                        <TextField
-                            id='email'
-                            label='Email Adress'
-                            variant='outlined'
-                            value={mail}
-                            required
-                            type='email'
-                            pattern='.+@globex.com'
-                            inputProps={{
-                                minLength: 8,
-                            }}
-                            onChange={event => setMail(event.target.value)}
-                        />
+                    <TextField
+                        id='email'
+                        label='Email Adress'
+                        variant='outlined'
+                        value={mail}
+                        required
+                        type='email'
+                        pattern='.+@globex.com'
+                        inputProps={{
+                            minLength: 8,
+                        }}
+                        onChange={event => setMail(event.target.value)}
+                    />
 
-                        <Button
-                            disabled={buttonDisable}
-                            variant='contained'
-                            className={classes.submitButton}
-                            type='submit'
-                            startIcon={<SaveAltIcon />}>
-                            Submit
+                    <Button
+                        disabled={buttonDisable}
+                        variant='contained'
+                        className={classes.submitButton}
+                        type='submit'
+                        startIcon={<SaveAltIcon />}>
+                        Submit
                     </Button>
-                    </form>
-                </Paper>
-            </div>
-            :
-            <Error>{error}</Error>
+                </form>
+            </Paper>
+        </div>
+        :
+        <Error>{error}</Error>
 
 }

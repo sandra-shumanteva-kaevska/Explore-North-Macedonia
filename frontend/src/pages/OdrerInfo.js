@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Box from '@material-ui/core/Box'
-import Loader from 'react-loader-spinner'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
@@ -51,15 +50,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const OrderInfo = () => {
+export const OrderInfo = ({ showLoader }) => {
     const { id } = useParams()
-    const [loader, setLoader] = useState(false)
     const [error, setError] = useState('')
     const [orderInfo, setOrderInfo] = useState()
     const classes = useStyles()
 
     useEffect(() => {
-        setLoader(true)
+        showLoader(true)
         fetch(`${baseAPI}/orders/${id}`)
             .then((response) => {
                 if (!response.ok) {
@@ -72,24 +70,18 @@ export const OrderInfo = () => {
             .catch((error) => {
                 setError('Order Info was not found')
             })
-            .finally(() => setLoader(false))
+            .finally(() => showLoader(false))
+        // eslint-disable-next-line
     }, [id])
 
-    return loader
-        ? <Loader
-            type="Hearts"
-            color="red"
-            height={400}
-            width={400}
-            className="loader" /> :
-        orderInfo ?
-            <Box className={classes.container}>
-                <Box className={classes.content}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        Thank you for your order {orderInfo.firstName} {orderInfo.lastName}
-                    </Typography>
-                    <Typography variant="body2" component="p"> You will recive your conformation on your e-mail {orderInfo.email}</Typography>
-                </Box>
-            </Box> :
-            <Error>{error}</Error>
+    return orderInfo ?
+        <Box className={classes.container}>
+            <Box className={classes.content}>
+                <Typography gutterBottom variant="h5" component="h2">
+                    Thank you for your order {orderInfo.firstName} {orderInfo.lastName}
+                </Typography>
+                <Typography variant="body2" component="p"> You will recive your conformation on your e-mail {orderInfo.email}</Typography>
+            </Box>
+        </Box> :
+        <Error>{error}</Error>
 }

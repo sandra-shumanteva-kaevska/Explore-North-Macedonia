@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
@@ -15,6 +15,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import background from './assets/background.jpg'
 import { ButtonBack } from 'components/ButtonBack'
 import { OrderInfo } from './pages/OdrerInfo'
+import Loader from 'react-loader-spinner'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,42 +31,53 @@ const useStyles = makeStyles((theme) => ({
 
 export const App = () => {
   const classes = useStyles()
+  const [loader, setLoader] = useState(false)
 
   return (
     <ThemeProvider theme={myTheme}>
-      <Box className={classes.root}>
-        <Header />
+      <Router>
+        <Box className={classes.root}>
+          <Header />
 
-        <Router>
-          <Switch>
-            <Route path="/" exact>
-              <Categories />
-            </Route>
+          {loader && <Loader
+            type="Hearts"
+            color="red"
+            height={400}
+            width={400}
+            className="loader" />}
 
-            <Route path="/offers" exact>
-              <OffersList />
-              <ButtonBack />
-            </Route>
+          <Box display="flex" flexGrow={1} flexDirection="column">
 
-            <Route path="/offers/:id" exact>
-              <OfferInfo />
-              <ButtonBack />
-            </Route>
+            <Switch>
+              <Route path="/" exact>
+                <Categories />
+              </Route>
 
-            <Route path="/offers/:id/order" exact>
-              <Order />
-              <ButtonBack />
-            </Route>
+              <Route path="/offers" exact>
+                <OffersList showLoader={setLoader} />
+                <ButtonBack />
+              </Route>
 
-            <Route path="/order/:id" exact>
-              <OrderInfo />
-            </Route>
+              <Route path="/offers/:id" exact>
+                <OfferInfo showLoader={setLoader} />
+                <ButtonBack />
+              </Route>
 
-          </Switch>
-        </Router>
+              <Route path="/offers/:id/order" exact>
+                <Order showLoader={setLoader} />
+                <ButtonBack />
+              </Route>
 
-        <Footer />
-      </Box >
+              <Route path="/order/:id" exact>
+                <OrderInfo showLoader={setLoader} />
+              </Route>
+
+            </Switch>
+          </Box>
+
+          <Footer />
+        </Box >
+      </Router>
     </ThemeProvider >
   )
 }
