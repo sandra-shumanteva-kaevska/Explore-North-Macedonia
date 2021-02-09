@@ -8,44 +8,25 @@ import { baseAPI } from 'config'
 import { Error } from 'components/Error'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        margin: '30px',
-        border: '2px solid blueviolet',
-        borderRadius: '40px',
-        padding: '25px',
-        backgroundColor: '#a4aae473',
-        width: '753px',
-    },
-
     container: {
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
-        margin: '20px',
-    },
-    content: {
-        width: '753px',
         color: 'white',
     },
     transparency: {
-        backgroundColor: '#00000075',
+        backgroundColor: '#000000c7',
         padding: '5px',
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
-        margin: '20px',
+        borderRadius: '10px',
+        textAlign: 'center'
     },
-    price: {
+    mail: {
         color: 'red',
-        fontWeight: 'bold',
-        textShadow: '1px 0px'
-    },
-    date: {
         fontWeight: 'bold'
     },
 }));
@@ -76,11 +57,11 @@ export const OrderInfo = ({ showLoader }) => {
 
     return orderInfo ?
         <Box className={classes.container}>
-            <Box className={classes.content}>
+            <Box className={classes.transparency}>
                 <Typography gutterBottom variant="h5" component="h2">
                     Thank you for your order {orderInfo.firstName} {orderInfo.lastName}
                 </Typography>
-                <Typography variant="body2" component="p"> You will recive your conformation on your e-mail {orderInfo.email}</Typography>
+                <Typography variant="body2" component="p"> You will recive your conformation on your e-mail: <span className={classes.mail} >{orderInfo.email}</span> </Typography>
             </Box>
         </Box> :
         <Error>{error}</Error>

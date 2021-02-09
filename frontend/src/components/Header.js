@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-import { MyMenu } from './Menu'
+import { MyMenu } from './MyMenu'
 import logo from '../assets/logo.jpg'
 
 const useStyles = makeStyles((theme) => ({

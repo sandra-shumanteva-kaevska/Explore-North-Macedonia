@@ -30,14 +30,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexGrow: '1',
         flexDirection: 'column',
-        width: '850px',
-        backgroundColor: '#ffffffd9'
+        backgroundColor: '#ffffffd9',
+        borderRadius: '25px',
+        maxWidth: '900px'
     },
     form: {
         '& > *': {
             margin: theme.spacing(1),
             width: '25ch',
         },
+        textAlign: 'center'
     },
     button: {
         display: 'flex',
@@ -48,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         color: 'white',
-        textShadow: '2px 2px #797575'
+        textShadow: '2px 2px #797575',
+        textAlign: 'center'
     },
     total: {
         color: '#2f0fde',
@@ -58,13 +61,9 @@ const useStyles = makeStyles((theme) => ({
     },
     totalBox: {
         backgroundColor: '#a994c7',
-        width: '20px',
-        height: '20px',
         fontWeight: 'bolder',
         padding: '5px',
-    },
-    sliderBox: {
-        width: 300 + theme.spacing(3) * 2,
+        borderRadius: '5px'
     },
     sliderTitle: {
         color: '#2f0fde',
@@ -139,7 +138,7 @@ export const Order = ({ showLoader }) => {
             <OfferInfoCard {...offer} />
             <Paper className={classes.orderContainer} elevation={3}>
 
-                <Box className={classes.sliderBox}>
+                <Box>
                     <Typography gutterBottom className={classes.sliderTitle}>Numer of persons:</Typography>
                     <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={1} onChange={(event, newValue) => setQuantity(newValue)} />
                 </Box>

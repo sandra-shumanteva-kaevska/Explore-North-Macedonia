@@ -25,8 +25,15 @@ const useStyles = makeStyles((theme) => ({
     flex: '1',
     backgroundImage: `url(${background})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    backgroundSize: 'cover'
   },
+  container: {
+    display: "flex",
+    flexGrow: '1',
+    flexDirection: "column",
+    padding: '10px',
+    justifyContent: 'center'
+  }
 }));
 
 export const App = () => {
@@ -46,7 +53,7 @@ export const App = () => {
             width={400}
             className="loader" />}
 
-          <Box display="flex" flexGrow={1} flexDirection="column">
+          <Box className={classes.container} >
 
             <Switch>
               <Route path="/" exact>

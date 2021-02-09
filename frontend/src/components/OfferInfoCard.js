@@ -6,44 +6,49 @@ import { Box, Button } from '@material-ui/core'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-        margin: '30px',
         border: '2px solid blueviolet',
         borderRadius: '40px',
-        padding: '25px',
+        padding: '5px 0px',
+        '@media (min-width: 768px)': {
+            padding: '25px'
+        },
         backgroundColor: '#a4aae473',
-        width: '753px',
+        maxWidth: '900px',
+        overflow: 'hidden'
     },
-
     container: {
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
-        margin: '20px',
     },
     content: {
-        width: '753px',
         color: 'white',
+        maxWidth: '900px'
     },
     transparency: {
-        backgroundColor: '#00000075',
+        backgroundColor: '#00000091',
         padding: '5px',
         display: 'flex',
         flexDirection: 'column',
         flexWrap: 'wrap',
         alignItems: 'center',
-        margin: '20px',
+        marginBottom: '10px',
+        borderRadius: '40px'
+    },
+    title: {
+        textAlign: 'center'
     },
     price: {
         color: 'red',
         fontWeight: 'bold',
-        textShadow: '1px 0px'
     },
     date: {
         fontWeight: 'bold'
@@ -56,7 +61,7 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
         <Box className={classes.container}>
             <Box className={classes.content}>
                 <Box className={classes.transparency}>
-                    <Typography gutterBottom variant="h5" component="h2">{offer.title}
+                    <Typography className={classes.title} gutterBottom variant="h5" component="h2">{offer.title}
                     </Typography>
                     <Typography variant="body2" component="p"> {offer.description}
                     </Typography>
