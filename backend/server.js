@@ -4,8 +4,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 import offersData from "./data/offersData.json"
-import Offer from "./models/offer"
-import Order from "./models/order"
+import Offer from "./models/offer.js"
+import Order from "./models/order.js"
 import { Mailer } from './Mailer'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency";
