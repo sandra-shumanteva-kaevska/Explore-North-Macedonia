@@ -4,8 +4,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 import offersData from "./data/offersData.json"
-import Offer from "./src/models/Offer"
-import Order from "./src/models/Order"
+import Offer from "./models/Offer"
+import Order from "./models/Order"
 import { Mailer } from './Mailer'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency";
@@ -122,7 +122,6 @@ app.post("/orders", async (req, res) => {
     res.status(201).json(newOrder)
   }
   catch (err) {
-    console.log(err)
     res.status(400).json({ message: "The order could not be created", err: err.errors })
   }
 })

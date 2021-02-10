@@ -1,7 +1,5 @@
 import nodemailer from 'nodemailer'
 
-console.log(process.env.SMTPuserName, process.env.SMTPpassword)
-
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
