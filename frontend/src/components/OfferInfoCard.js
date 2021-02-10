@@ -6,7 +6,6 @@ import { Box, Button } from '@material-ui/core'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles((theme) => ({
     root: {

@@ -6,6 +6,9 @@ import { Button, Typography } from '@material-ui/core'
 import SaveAltIcon from '@material-ui/icons/SaveAlt'
 import { useParams, useHistory } from 'react-router-dom'
 import Box from '@material-ui/core/Box'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import DialogActions from '@material-ui/core/DialogActions'
+import Dialog from '@material-ui/core/Dialog'
 
 import { OfferInfoCard } from '../components/OfferInfoCard'
 import { baseAPI } from '../config'
@@ -70,6 +73,9 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         textShadow: '1px 0px',
         fontSize: 'x-large'
+    },
+    dialogActions: {
+        backgroundColor: '#cd9ce8b8'
     }
 }))
 
@@ -83,6 +89,7 @@ export const Order = ({ showLoader }) => {
     const [quantity, setQuantity] = useState(1)
     const [error, setError] = useState('')
     const [buttonDisable, setButtonDisable] = useState(false)
+    const [open, setOpen] = useState(false)
 
     let history = useHistory()
 
@@ -125,6 +132,13 @@ export const Order = ({ showLoader }) => {
 
     const handleSubmit = event => {
         event.preventDefault()
+        setOpen(true)
+    }
+    const handleCancel = () => {
+        setOpen(false)
+    }
+
+    const handleOk = () => {
         setButtonDisable(true)
         postOrder({ firstName, lastName, email: mail, offer: id, quantity })
         setFirstName('')
@@ -200,6 +214,24 @@ export const Order = ({ showLoader }) => {
                     </Button>
                 </form>
             </Paper>
+
+            <Dialog
+                disableBackdropClick
+                disableEscapeKeyDown
+                maxWidth="xs"
+                aria-labelledby="confirmation-dialog-title"
+                open={open}
+            >
+                <DialogTitle id="confirmation-dialog-title">Are you sure you want to create this order?</DialogTitle>
+                <DialogActions>
+                    <Button className={classes.dialogActions} autoFocus onClick={handleCancel} color="primary">
+                        Cancel
+                    </Button>
+                    <Button className={classes.dialogActions} onClick={handleOk} color="primary">
+                        Ok
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </div>
         :
         <Error>{error}</Error>
