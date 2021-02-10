@@ -4,9 +4,84 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 import offersData from "./data/offersData.json"
-import Offer from "./models/offer.js"
-import Order from "./models/order.js"
 import { Mailer } from './Mailer'
+
+const Offer = new mongoose.model("Offer", {
+  title: {
+    type: String,
+    required: true,
+    minlength: 3,
+    maxlength: 200
+  },
+  description: {
+    type: String,
+    required: true,
+    minlength: 3,
+  },
+  startDate: {
+    type: Date,
+    required: true
+  },
+  endDate: {
+    type: Date,
+    required: true
+  },
+  price: {
+    type: Number,
+    default: 0
+  },
+  images: [{
+    url: {
+      type: String,
+      required: true
+    },
+    alt: {
+      type: String,
+      required: true
+    }
+  }],
+  category: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+})
+
+const Order = new mongoose.model("Order", {
+  firstName: {
+    type: String,
+    required: true,
+    minlength: 3,
+    maxlength: 15
+  },
+  lastName: {
+    type: String,
+    required: true,
+    minlength: 3,
+    maxlength: 30
+  },
+  email: {
+    type: String,
+    required: true,
+    minlength: 3
+  },
+  quantity: {
+    type: Number,
+    default: 1
+  },
+  offer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Offer',
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+})
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
