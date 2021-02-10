@@ -144,6 +144,7 @@ export const Order = ({ showLoader }) => {
         setFirstName('')
         setLastName('')
         setMail('')
+        setOpen(false)
     }
 
     return offer ?

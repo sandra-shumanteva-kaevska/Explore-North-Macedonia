@@ -49,8 +49,8 @@ export const MyMenu = () => {
                             </StyledMenuItem>
                         </MenuItem>
                         {categories.map((item) =>
-                            <MenuItem onClick={popupState.close}>
-                                <StyledMenuItem component={Link} to={`/offers?category=${item.id}`} key={item.id} >
+                            <MenuItem onClick={popupState.close} key={item.id} >
+                                <StyledMenuItem component={Link} to={`/offers?category=${item.id}`}>
                                     <ListItemIcon>
                                         {item.icon}
                                     </ListItemIcon>
