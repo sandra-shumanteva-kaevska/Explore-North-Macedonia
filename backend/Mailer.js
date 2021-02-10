@@ -14,7 +14,6 @@ export const Mailer = (email, firstName, lastName) => {
 
 
     var mailOptions = {
-        from: 'figurable.cms@gmail.com',
         to: email,
         subject: 'Sending Order confirmation',
         text: `Thank you ${firstName} ${lastName} for your order. You have successfully ordered from Explore North Macedonia`
