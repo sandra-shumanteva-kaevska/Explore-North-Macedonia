@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import offersData from "./data/offersData.json"
 import Offer from "./src/models/Offer"
 import Order from "./src/models/Order"
+import { Mailer } from './Mailer'
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency";
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -117,9 +118,11 @@ app.get("/orders/:id", async (req, res) => {
 app.post("/orders", async (req, res) => {
   try {
     const newOrder = await Order.create(req.body)
+    Mailer(req.body.email, req.body.firstName, req.body.lastName)
     res.status(201).json(newOrder)
   }
   catch (err) {
+    console.log(err)
     res.status(400).json({ message: "The order could not be created", err: err.errors })
   }
 })
