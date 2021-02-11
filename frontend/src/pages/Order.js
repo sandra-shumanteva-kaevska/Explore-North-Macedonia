@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         flexDirection: 'column',
         alignItems: 'center'
-
     },
     orderContainer: {
         display: 'flex',
@@ -100,7 +99,7 @@ export const Order = ({ showLoader }) => {
                 if (!response.ok) {
                     throw Error(response.statusText);
                 }
-                return response;
+                return response
             })
             .then(response => response.json())
             .then(json => setOffer(json))
@@ -113,15 +112,15 @@ export const Order = ({ showLoader }) => {
 
     const postOrder = (data) => {
         fetch(`${baseAPI}/orders`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
             .then((response) => {
                 if (!response.ok) {
-                    throw Error(response.statusText);
+                    throw Error(response.statusText)
                 }
-                return response;
+                return response
             })
             .then(response => response.json())
             .then((json) => history.push(`/order/${json._id}`))
@@ -149,20 +148,21 @@ export const Order = ({ showLoader }) => {
 
     return offer ?
         <div className={classes.card}>
-            <Typography variant="h3" className={classes.title}>You choose this offer:</Typography>
+            <Typography variant='h3' className={classes.title}>You choose this offer:</Typography>
             <OfferInfoCard {...offer} />
             <Paper className={classes.orderContainer} elevation={3}>
 
                 <Box>
                     <Typography gutterBottom className={classes.sliderTitle}>Numer of persons:</Typography>
-                    <PrettoSlider min={1} max={10} valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={1} onChange={(event, newValue) => setQuantity(newValue)} />
+                    <PrettoSlider min={1} max={10} valueLabelDisplay='auto' aria-label='pretto slider' defaultValue={1} onChange={(event, newValue) => setQuantity(newValue)} />
                 </Box>
 
                 <Box>
                     <p className={classes.total}>Total:</p>
                     <span className={classes.totalBox}>{offer.price * quantity} €</span>
                 </Box>
-                <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
+
+                <form className={classes.form} autoComplete='off' onSubmit={handleSubmit}>
                     <TextField
                         id='firstName'
                         label='First Name'
@@ -219,16 +219,16 @@ export const Order = ({ showLoader }) => {
             <Dialog
                 disableBackdropClick
                 disableEscapeKeyDown
-                maxWidth="xs"
-                aria-labelledby="confirmation-dialog-title"
+                maxWidth='xs'
+                aria-labelledby='confirmation-dialog-title'
                 open={open}
             >
-                <DialogTitle id="confirmation-dialog-title">Are you sure you want to create this order?</DialogTitle>
+                <DialogTitle id='confirmation-dialog-title'>Are you sure you want to create this order?</DialogTitle>
                 <DialogActions>
-                    <Button className={classes.dialogActions} autoFocus onClick={handleCancel} color="primary">
+                    <Button className={classes.dialogActions} autoFocus onClick={handleCancel} color='primary'>
                         Cancel
                     </Button>
-                    <Button className={classes.dialogActions} onClick={handleOk} color="primary">
+                    <Button className={classes.dialogActions} onClick={handleOk} color='primary'>
                         Ok
                     </Button>
                 </DialogActions>

@@ -1,24 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Slider from '@material-ui/core/Slider';
-import Tooltip from '@material-ui/core/Tooltip';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Slider from '@material-ui/core/Slider'
+import Tooltip from '@material-ui/core/Tooltip'
 
 function ValueLabelComponent(props) {
-    const { children, open, value } = props;
+    const { children, open, value } = props
 
     return (
-        <Tooltip open={open} enterTouchDelay={0} placement="top" title={value}>
+        <Tooltip open={open} enterTouchDelay={0} placement='top' title={value}>
             {children}
         </Tooltip>
-    );
+    )
 }
 
 ValueLabelComponent.propTypes = {
     children: PropTypes.element.isRequired,
     open: PropTypes.bool.isRequired,
     value: PropTypes.number.isRequired,
-};
+}
 
 export const PrettoSlider = withStyles({
     root: {
@@ -48,5 +48,4 @@ export const PrettoSlider = withStyles({
         height: 8,
         borderRadius: 4,
     },
-
 })(Slider);

@@ -1,11 +1,11 @@
-import React from "react"
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import { Link } from "react-router-dom";
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Typography from '@material-ui/core/Typography'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: {
@@ -42,8 +42,8 @@ export const CategoryCard = (category) => {
                         title={category.alt}
                     />
                     <CardContent>
-                        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{category.category}
-                            <Typography className={classes.content} variant="body2" color="textSecondary" component="p"> {category.description}
+                        <Typography className={classes.title} gutterBottom variant='h5' component='h2'>{category.category}
+                            <Typography className={classes.content} variant='body2' color='textSecondary' component='p'> {category.description}
                             </Typography>
                         </Typography>
                     </CardContent>

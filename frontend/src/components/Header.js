@@ -22,16 +22,16 @@ const useStyles = makeStyles((theme) => ({
         height: '45px',
         width: '45px',
     },
-}));
+}))
 
 export const Header = () => {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
-        <AppBar className={classes.root} position="sticky">
+        <AppBar className={classes.root} position='sticky'>
             <Toolbar>
                 <MyMenu />
-                <Typography variant="h6" className={classes.title}>
+                <Typography variant='h6' className={classes.title}>
                     Explore North Macedonia <img src={logo} alt='Point finger' className={classes.imgLogo} />
                 </Typography>
             </Toolbar>

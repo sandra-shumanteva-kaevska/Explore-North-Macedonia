@@ -20,30 +20,30 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexGrow: '1'
     },
-}));
+}))
 
 function useQuery() {
-    return new URLSearchParams(useLocation().search);
+    return new URLSearchParams(useLocation().search)
 }
 
 export const OffersList = ({ showLoader }) => {
-    const query = useQuery();
+    const query = useQuery()
     const classes = useStyles()
 
-    const [offers, setOffers] = useState([]);
+    const [offers, setOffers] = useState([])
 
     useEffect(() => {
         let offersUrl = `${baseAPI}/offers`
         showLoader(true)
-        if (query.get("category")) {
-            offersUrl += `?category=${query.get("category")}`
+        if (query.get('category')) {
+            offersUrl += `?category=${query.get('category')}`
         }
         fetch(offersUrl)
             .then(response => response.json())
             .then(json => setOffers(json))
             .finally(() => showLoader(false))
         // eslint-disable-next-line
-    }, [query.get("category")])
+    }, [query.get('category')])
 
     return <section className={classes.section}>
         <Box className={classes.offerList}>
@@ -52,5 +52,4 @@ export const OffersList = ({ showLoader }) => {
             )}
         </Box>
     </section>
-
 }

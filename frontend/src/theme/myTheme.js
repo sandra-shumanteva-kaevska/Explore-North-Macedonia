@@ -7,4 +7,4 @@ export const myTheme = createMuiTheme({
             'cursive',
         ].join(','),
     }
-});
+})

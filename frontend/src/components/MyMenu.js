@@ -25,27 +25,27 @@ const StyledMenuItem = withStyles((theme) => ({
 
 export const MyMenu = () => {
     return (
-        <PopupState variant="popover" popupId="demo-popup-menu">
+        <PopupState variant='popover' popupId='demo-popup-menu'>
             {(popupState) => (
                 <>
-                    <Button variant="contained" color="primary" {...bindTrigger(popupState)}>
+                    <Button variant='contained' color='primary' {...bindTrigger(popupState)}>
                         Menu
                      </Button>
                     <Menu {...bindMenu(popupState)}>
                         <MenuItem onClick={popupState.close}>
-                            <StyledMenuItem component={Link} to="/">
+                            <StyledMenuItem component={Link} to='/'>
                                 <ListItemIcon>
-                                    <HomeIcon fontSize="small" />
+                                    <HomeIcon fontSize='small' />
                                 </ListItemIcon>
-                                <ListItemText primary="Home" />
+                                <ListItemText primary='Home' />
                             </StyledMenuItem>
                         </MenuItem>
                         <MenuItem onClick={popupState.close}>
-                            <StyledMenuItem component={Link} to="/offers">
+                            <StyledMenuItem component={Link} to='/offers'>
                                 <ListItemIcon>
-                                    <LocalLibraryIcon fontSize="small" />
+                                    <LocalLibraryIcon fontSize='small' />
                                 </ListItemIcon>
-                                <ListItemText primary="All Offers" />
+                                <ListItemText primary='All Offers' />
                             </StyledMenuItem>
                         </MenuItem>
                         {categories.map((item) =>

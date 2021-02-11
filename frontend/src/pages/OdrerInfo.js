@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'red',
         fontWeight: 'bold'
     },
-}));
+}))
 
 export const OrderInfo = ({ showLoader }) => {
     const { id } = useParams()
@@ -58,10 +58,10 @@ export const OrderInfo = ({ showLoader }) => {
     return orderInfo ?
         <Box className={classes.container}>
             <Box className={classes.transparency}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant='h5' component='h2'>
                     Thank you for your order {orderInfo.firstName} {orderInfo.lastName}
                 </Typography>
-                <Typography variant="body2" component="p"> You will recive your conformation on your e-mail: <span className={classes.mail} >{orderInfo.email}</span> </Typography>
+                <Typography variant='body2' component='p'> You will recive your conformation on your e-mail: <span className={classes.mail} >{orderInfo.email}</span> </Typography>
             </Box>
         </Box> :
         <Error>{error}</Error>

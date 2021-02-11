@@ -17,11 +17,5 @@ export const Mailer = (email, firstName, lastName) => {
         text: `Thank you ${firstName} ${lastName} for your order. You have successfully ordered from Explore North Macedonia`
     }
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-    })
+    transporter.sendMail(mailOptions)
 }

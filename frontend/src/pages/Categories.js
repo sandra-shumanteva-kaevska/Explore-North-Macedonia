@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
-import { CategoryCard } from "../components/CategoryCard"
+import { CategoryCard } from '../components/CategoryCard'
 import { categories } from '../config'
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexGrow: '1'
     },
-}));
+}))
 
 export const Categories = () => {
     const classes = useStyles()

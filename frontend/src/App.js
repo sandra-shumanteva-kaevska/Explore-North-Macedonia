@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
     justifyContent: 'center'
   }
-}));
+}))
 
 export const App = () => {
   const classes = useStyles()

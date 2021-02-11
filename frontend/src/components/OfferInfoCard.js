@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     date: {
         fontWeight: 'bold'
     },
-}));
+}))
 
 export const OfferInfoCard = ({ showDetails, ...offer }) => {
     const classes = useStyles()
@@ -62,9 +62,9 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
         <Box className={classes.container}>
             <Box className={classes.content}>
                 <Box className={classes.transparency}>
-                    <Typography className={classes.title} gutterBottom variant="h5" component="h2">{offer.title}
+                    <Typography className={classes.title} gutterBottom variant='h5' component='h2'>{offer.title}
                     </Typography>
-                    <Typography variant="body2" component="p"> {offer.description}
+                    <Typography variant='body2' component='p'> {offer.description}
                     </Typography>
                     <Box className={classes.price}>Price: {offer.price} €</Box>
                     <Box className={classes.date}>Start date: {new Date(offer.startDate).toLocaleDateString()}</Box>
@@ -74,8 +74,8 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
                             <Box mt={1} />
                             <Link to={`/offers/${offer._id}/order`}>
                                 <Button
-                                    variant="contained"
-                                    color="primary"
+                                    variant='contained'
+                                    color='primary'
                                     className={classes.button}
                                     endIcon={<ShoppingCartTwoToneIcon />}
                                 >
@@ -96,5 +96,5 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
                 </GridList>
             </Box>)}
         </Box>
-    );
+    )
 }

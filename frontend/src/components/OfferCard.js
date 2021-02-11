@@ -25,10 +25,10 @@ const useStyles = makeStyles({
     actionArea: {
         textAlign: 'center'
     }
-});
+})
 
 export const OfferCard = (offer) => {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <Link to={`/offers/${offer._id}`}>
@@ -40,7 +40,7 @@ export const OfferCard = (offer) => {
                         title={offer.images[0].alt}
                     />
                     <CardContent>
-                        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{offer.title}
+                        <Typography className={classes.title} gutterBottom variant='h5' component='h2'>{offer.title}
                         </Typography>
                     </CardContent>
                 </CardActionArea>

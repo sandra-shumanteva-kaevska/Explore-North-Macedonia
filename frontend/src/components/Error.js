@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     alert: {
         alignSelf: 'center'
     }
-
 }))
 
 export const Error = ({ children }) => {
@@ -24,7 +23,7 @@ export const Error = ({ children }) => {
 
     return (
         <div className={classes.container}>
-            <Alert className={classes.alert} variant="filled" severity="error">
+            <Alert className={classes.alert} variant='filled' severity='error'>
                 {children}
             </Alert>
         </div>
