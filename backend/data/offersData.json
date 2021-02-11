@@ -7,31 +7,31 @@
         "price": 250,
         "images": [
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/1.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/1.jpg",
                 "alt": "Small lake and mountain view"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/2.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/2.jpg",
                 "alt": "Small waterfall"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/3.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/3.jpg",
                 "alt": "Small waterfall"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/4.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/4.jpg",
                 "alt": "Mountain village covered with snow"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/5.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/5.jpg",
                 "alt": "Mountains"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/6.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/6.jpg",
                 "alt": "Mountains"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/waterfallAdventure/7.jpg",
+                "url": "/images/hikingTours/waterfallAdventure/7.jpg",
                 "alt": "Mountain with clouds"
             }
         ],
@@ -45,47 +45,47 @@
         "price": 180,
         "images": [
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/1.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/1.jpg",
                 "alt": "Mountain view"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/2.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/2.jpg",
                 "alt": "Small waterfall"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/3.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/3.jpg",
                 "alt": "Green grass with mountain view"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/4.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/4.jpg",
                 "alt": "River and mountain "
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/5.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/5.jpg",
                 "alt": "View of snow top of mountain"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/6.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/6.jpg",
                 "alt": "View of top of mountain"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/7.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/7.jpg",
                 "alt": "People hiking on mountain"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/8.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/8.jpg",
                 "alt": "Mountain view"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/9.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/9.jpg",
                 "alt": "Green grass with mountain view"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/10.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/10.jpg",
                 "alt": "Sun behind the top of the mountain"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/topOfMacedonia/11.jpg",
+                "url": "/images/hikingTours/topOfMacedonia/11.jpg",
                 "alt": "Small waterfall"
             }
         ],
@@ -99,43 +99,43 @@
         "price": 50,
         "images": [
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/1.jpg",
+                "url": "/images/hikingTours/vodnoHike/1.jpg",
                 "alt": "Matka canyon"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/2.jpg",
+                "url": "/images/hikingTours/vodnoHike/2.jpg",
                 "alt": "River Treska"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/3.jpg",
+                "url": "/images/hikingTours/vodnoHike/3.jpg",
                 "alt": "Matka canyon"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/4.jpg",
+                "url": "/images/hikingTours/vodnoHike/4.jpg",
                 "alt": "Panteleimon Church overlooking Skopje"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/5.jpg",
+                "url": "/images/hikingTours/vodnoHike/5.jpg",
                 "alt": "Mountain Vodno with Skopje view "
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/6.jpg",
+                "url": "/images/hikingTours/vodnoHike/6.jpg",
                 "alt": "Vodno cross"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/7.jpg",
+                "url": "/images/hikingTours/vodnoHike/7.jpg",
                 "alt": "Cable car on Mount Vodno"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/8.jpg",
+                "url": "/images/hikingTours/vodnoHike/8.jpg",
                 "alt": "Mountain Vodno with Skopje view "
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/9.jpg",
+                "url": "/images/hikingTours/vodnoHike/9.jpg",
                 "alt": "River Treska"
             },
             {
-                "url": "http://localhost:8080/images/hikingTours/vodnoHike/10.jpg",
+                "url": "/images/hikingTours/vodnoHike/10.jpg",
                 "alt": "Matka canyon"
             }
         ],
@@ -149,23 +149,23 @@
         "price": 80,
         "images": [
             {
-                "url": "http://localhost:8080/images/bikingTours/pelister/1.jpg",
+                "url": "/images/bikingTours/pelister/1.jpg",
                 "alt": "Forest in Pelister"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/pelister/2.jpg",
+                "url": "/images/bikingTours/pelister/2.jpg",
                 "alt": "\"Big Lake\" Pelister"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/pelister/3.jpg",
+                "url": "/images/bikingTours/pelister/3.jpg",
                 "alt": "Pelister view"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/pelister/4.jpg",
+                "url": "/images/bikingTours/pelister/4.jpg",
                 "alt": "\"Big Lake\" Pelister"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/pelister/5.jpg",
+                "url": "/images/bikingTours/pelister/5.jpg",
                 "alt": "Pelister view"
             }
         ],
@@ -179,23 +179,23 @@
         "price": 190,
         "images": [
             {
-                "url": "http://localhost:8080/images/bikingTours/mountanAdventure/1.jpg",
+                "url": "/images/bikingTours/mountanAdventure/1.jpg",
                 "alt": "Mountain View"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/mountanAdventure/2.jpg",
+                "url": "/images/bikingTours/mountanAdventure/2.jpg",
                 "alt": "Green grass with mountain view"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/mountanAdventure/3.jpg",
+                "url": "/images/bikingTours/mountanAdventure/3.jpg",
                 "alt": "Top of mountain"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/mountanAdventure/4.jpg",
+                "url": "/images/bikingTours/mountanAdventure/4.jpg",
                 "alt": "Top of mountain"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/mountanAdventure/5.jpg",
+                "url": "/images/bikingTours/mountanAdventure/5.jpg",
                 "alt": "Green grass with mountain view"
             }
         ],
@@ -209,27 +209,27 @@
         "price": 60,
         "images": [
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/1.jpg",
+                "url": "/images/bikingTours/nationalBiking/1.jpg",
                 "alt": "Green grass with mountain view"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/2.jpg",
+                "url": "/images/bikingTours/nationalBiking/2.jpg",
                 "alt": "View of top of mountain"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/3.jpg",
+                "url": "/images/bikingTours/nationalBiking/3.jpg",
                 "alt": "Top of mountain covered with snow"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/4.jpg",
+                "url": "/images/bikingTours/nationalBiking/4.jpg",
                 "alt": "Top of mount view"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/5.jpg",
+                "url": "/images/bikingTours/nationalBiking/5.jpg",
                 "alt": "Top of mount view with lake view"
             },
             {
-                "url": "http://localhost:8080/images/bikingTours/nationalBiking/6.jpg",
+                "url": "/images/bikingTours/nationalBiking/6.jpg",
                 "alt": "Top of mount view with lake view"
             }
         ],
@@ -243,27 +243,27 @@
         "price": 150,
         "images": [
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/1.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/1.jpg",
                 "alt": "\"Stobi\" the old City in Skopje"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/2.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/2.jpg",
                 "alt": "\"Stobi\" the old City in Skopje"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/3.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/3.jpg",
                 "alt": "Vineyards"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/4.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/4.jpg",
                 "alt": "Cellar with barrels of wine"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/5.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/5.jpg",
                 "alt": "\"Stobi\" the old City in Skopje"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineTastingSkopje/6.jpg",
+                "url": "/images/cultureTours/wineTastingSkopje/6.jpg",
                 "alt": "Three glasses with wine"
             }
         ],
@@ -277,19 +277,19 @@
         "price": 550,
         "images": [
             {
-                "url": "http://localhost:8080/images/cultureTours/wineExperience/1.jpg",
+                "url": "/images/cultureTours/wineExperience/1.jpg",
                 "alt": "Room in winary"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineExperience/2.jpg",
+                "url": "/images/cultureTours/wineExperience/2.jpg",
                 "alt": "The building of the winery"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineExperience/3.jpg",
+                "url": "/images/cultureTours/wineExperience/3.jpg",
                 "alt": "Table with grapes, wine and glasses"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/wineExperience/4.jpg",
+                "url": "/images/cultureTours/wineExperience/4.jpg",
                 "alt": "Picture witn national pie, cheese and tomato"
             }
         ],
@@ -303,47 +303,47 @@
         "price": 1400,
         "images": [
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/1.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/1.jpg",
                 "alt": "National Macedonian meal \"Tavce gravce\""
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/2.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/2.jpg",
                 "alt": "National Macedonian meal \"Pastrmajlija\""
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/3.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/3.jpg",
                 "alt": "Kebabs with onion and chilli pepper"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/4.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/4.jpg",
                 "alt": "National Macedonian meal \"Daska\""
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/5.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/5.jpg",
                 "alt": "Vineyards"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/6.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/6.jpg",
                 "alt": "The building of the winery with vineyards"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/7.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/7.jpg",
                 "alt": "National Macedonian meal: bread with \"Ajvar\" and white cheese"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/8.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/8.jpg",
                 "alt": "National Macedonian salad \"Shopska\""
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/9.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/9.jpg",
                 "alt": "Table with grapes, wine and glasses"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/10.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/10.jpg",
                 "alt": "Vineyards with barrel of wine, grapes and glass of white wine"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/dionysusMacedonia/11.jpg",
+                "url": "/images/cultureTours/dionysusMacedonia/11.jpg",
                 "alt": "Mix of Macedonian national food"
             }
         ],
@@ -357,75 +357,75 @@
         "price": 1670,
         "images": [
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/1.jpg",
+                "url": "/images/cultureTours/grandHeritage/1.jpg",
                 "alt": "Galičnik Wedding (groom shaving)"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/2.jpg",
+                "url": "/images/cultureTours/grandHeritage/2.jpg",
                 "alt": "Galichnik grooms in a church"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/3.jpg",
+                "url": "/images/cultureTours/grandHeritage/3.jpg",
                 "alt": "Galichnik bride on a horse"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/4.jpg",
+                "url": "/images/cultureTours/grandHeritage/4.jpg",
                 "alt": "River Vardar"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/5.jpg",
+                "url": "/images/cultureTours/grandHeritage/5.jpg",
                 "alt": "\"Vrutok\""
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/6.jpg",
+                "url": "/images/cultureTours/grandHeritage/6.jpg",
                 "alt": "River Vardar"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/7.jpg",
+                "url": "/images/cultureTours/grandHeritage/7.jpg",
                 "alt": "Old bazаar"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/8.jpg",
+                "url": "/images/cultureTours/grandHeritage/8.jpg",
                 "alt": "Church \"Kaneo\" in Ohrid"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/9.jpg",
+                "url": "/images/cultureTours/grandHeritage/9.jpg",
                 "alt": "Vevcani Carnival (people with masks)"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/10.jpg",
+                "url": "/images/cultureTours/grandHeritage/10.jpg",
                 "alt": "Vevcani Carnival (man on horse)"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/11.jpg",
+                "url": "/images/cultureTours/grandHeritage/11.jpg",
                 "alt": "Vevcani Carnival (people with masks)"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/12.jpg",
+                "url": "/images/cultureTours/grandHeritage/12.jpg",
                 "alt": "Old bazаar"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/13.jpg",
+                "url": "/images/cultureTours/grandHeritage/13.jpg",
                 "alt": "Amphitheater in Ohrid"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/14.jpg",
+                "url": "/images/cultureTours/grandHeritage/14.jpg",
                 "alt": "Wild horses"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/15.jpg",
+                "url": "/images/cultureTours/grandHeritage/15.jpg",
                 "alt": "Village Galicnik"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/16.jpg",
+                "url": "/images/cultureTours/grandHeritage/16.jpg",
                 "alt": "People with torches"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/17.jpg",
+                "url": "/images/cultureTours/grandHeritage/17.jpg",
                 "alt": "Old bazаar"
             },
             {
-                "url": "http://localhost:8080/images/cultureTours/grandHeritage/18.jpg",
+                "url": "/images/cultureTours/grandHeritage/18.jpg",
                 "alt": "Prehistoric houses"
             }
         ],

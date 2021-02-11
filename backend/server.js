@@ -1,15 +1,15 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import mongoose from "mongoose";
+import express from "express"
+import bodyParser from "body-parser"
+import cors from "cors"
+import mongoose from "mongoose"
 
 import offersData from "./data/offersData.json"
 import Order from "./models/order"
 import Offer from './models/offer'
 import { Mailer } from './mailer'
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency";
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost:27017/agency"
+mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise;
 
 const port = process.env.PORT || 8080

@@ -7,6 +7,8 @@ import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone'
 
+import { baseAPI } from '../config'
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -88,7 +90,7 @@ export const OfferInfoCard = ({ showDetails, ...offer }) => {
                 <GridList cellHeight={160} cols={3}>
                     {offer.images.map((image) => (
                         <GridListTile key={image.url} cols={1}>
-                            <img src={image.url} alt={image.alt} />
+                            <img src={`${baseAPI}${image.url}`} alt={image.alt} />
                         </GridListTile>
                     ))}
                 </GridList>

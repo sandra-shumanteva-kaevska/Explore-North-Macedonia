@@ -2,4 +2,4 @@
 Travel Agency
 
 Backend:
-https://explore-macedonia.herokuapp.com/offers
+https://explore-macedonia.herokuapp.com

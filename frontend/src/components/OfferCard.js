@@ -7,6 +7,8 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
 
+import { baseAPI } from '../config'
+
 const useStyles = makeStyles({
     root: {
         margin: '20px',
@@ -34,7 +36,7 @@ export const OfferCard = (offer) => {
                 <CardActionArea className={classes.actionArea}>
                     <CardMedia
                         className={classes.media}
-                        image={offer.images[0].url}
+                        image={`${baseAPI}${offer.images[0].url}`}
                         title={offer.images[0].alt}
                     />
                     <CardContent>
