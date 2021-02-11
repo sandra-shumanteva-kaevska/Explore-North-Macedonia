@@ -1,14 +1,31 @@
 # Explore-North-Macedonia
-Travel Agency
 
-Backend:
+This is web site for Travel Agency in North Macedonia. The site works in Chrome, Firefox and Safari.
+It is responsive and works well on mobile, tablet and desktop.
+
+## Tech
+
+For this site I have used:
+- For backend:
+ * Node.js
+ * Express
+ * Mongoose
+ * Nodemailer 
+
+- For DataBase:
+ * MongoDB  
+
+- For frontend:
+ * React
+ * Material-UI
+ * React Router DOM
+ * Moment
+ * mui-image-slider
+ * react-loader-spinner 
+
+## View it live
+- Backend:
 https://explore-macedonia.herokuapp.com
 
-Frontend:
+- Frontend:
 https://explore-north-macedonia.netlify.app/
-
-
-## Deploying backend to heroku
-
-1) Go into the source folder and open CMD
-2) execute => git subtree push --prefix backend heroku main
