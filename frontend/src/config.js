@@ -4,7 +4,7 @@ import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike'
 import NaturePeopleIcon from '@material-ui/icons/NaturePeople'
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance'
 
-export const baseAPI = process.env.BASE_API || 'http://localhost:8080'
+export const baseAPI = process.env.REACT_APP_BASE_API || 'http://localhost:8080'
 export const categories = [
     {
         category: 'Hiking Tour',
