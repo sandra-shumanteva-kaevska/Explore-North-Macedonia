@@ -1,7 +1,7 @@
 # Explore-North-Macedonia
 
 This is web site for Travel Agency in North Macedonia. The site works in Chrome, Firefox and Safari.
-It is responsive and works well on mobile, tablet and desktop.
+It is responsive and works well on mobile, tablet and desktop. In this project I devolep the backend and frontend
 
 ## Tech
 
